@@ -11,9 +11,16 @@
 import UIKit
 import CoreLocation
 import MapKit
+import Parse
 
 
 class MapViewController: UIViewController , CLLocationManagerDelegate , MKMapViewDelegate{
+    
+    
+    
+    var animals: NSMutableArray!
+    
+    
     
     @IBOutlet weak var mapView: MKMapView!
     var locationManager = CLLocationManager()
@@ -27,6 +34,16 @@ class MapViewController: UIViewController , CLLocationManagerDelegate , MKMapVie
         
         generatePins()
         
+        
+    }
+    
+    func retrieveAnimalsFromParse(){
+        var retrieve:PFQuery = PFQuery (className: "Animal_Data")
+        
+        
+   //     retrieve.findObjectsInBackgroundWithBlock { (objects:[AnyObject]!, error:NSError) -> Void in
+     //       <#code#>
+     //   }
         
     }
     
