@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A7777631AFBD788008BC08D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7777621AFBD788008BC08D /* MapViewController.swift */; };
 		83676B441AFBCB390080042F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83676B431AFBCB390080042F /* AppDelegate.swift */; };
 		83676B471AFBCB390080042F /* AnimalRescue.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 83676B451AFBCB390080042F /* AnimalRescue.xcdatamodeld */; };
 		83676B491AFBCB390080042F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83676B481AFBCB390080042F /* ViewController.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A7777621AFBD788008BC08D /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		83676B3E1AFBCB390080042F /* AnimalRescue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimalRescue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83676B421AFBCB390080042F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83676B431AFBCB390080042F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 			children = (
 				83676B431AFBCB390080042F /* AppDelegate.swift */,
 				83676B481AFBCB390080042F /* ViewController.swift */,
+				2A7777621AFBD788008BC08D /* MapViewController.swift */,
 				83676B4A1AFBCB390080042F /* Main.storyboard */,
 				83676B4D1AFBCB390080042F /* Images.xcassets */,
 				83676B4F1AFBCB390080042F /* LaunchScreen.xib */,
@@ -218,6 +221,7 @@
 				83676B491AFBCB390080042F /* ViewController.swift in Sources */,
 				83676B471AFBCB390080042F /* AnimalRescue.xcdatamodeld in Sources */,
 				83676B441AFBCB390080042F /* AppDelegate.swift in Sources */,
+				2A7777631AFBD788008BC08D /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +419,7 @@
 				83676B621AFBCB390080042F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		83676B631AFBCB390080042F /* Build configuration list for PBXNativeTarget "AnimalRescueTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +428,7 @@
 				83676B651AFBCB390080042F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
