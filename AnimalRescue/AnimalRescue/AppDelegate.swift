@@ -9,6 +9,10 @@
 import UIKit
 import CoreData
 import FBSDKCoreKit
+import Parse
+import Bolts
+
+//aa
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,6 +22,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        Parse.enableLocalDatastore()
+        
+        // Initialize Parse.
+        Parse.setApplicationId("yfCNiUcrdviORRMpVY7UyE97kbx9O0fFj0MyjiGT",
+            clientKey: "mdPHBjE0tRUD7SCFRVLNacLLmPB9jrNsNnylTZjF")
+        
+        // [Optional] Track statistics around application opens.
+        PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
+        
         
         return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
     }

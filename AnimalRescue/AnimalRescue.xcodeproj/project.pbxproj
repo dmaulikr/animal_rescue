@@ -11,6 +11,8 @@
 		30995EED1AFBDB33005266A1 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30995EE91AFBDB33005266A1 /* ParseFacebookUtils.framework */; };
 		30995EEE1AFBDB33005266A1 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30995EEA1AFBDB33005266A1 /* ParseFacebookUtilsV4.framework */; };
 		30995EEF1AFBDB33005266A1 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30995EEB1AFBDB33005266A1 /* ParseUI.framework */; };
+		344288071AFBEFB200C550CF /* Parse in Frameworks */ = {isa = PBXBuildFile; fileRef = 344288061AFBEFB200C550CF /* Parse */; };
+		344288091AFBEFF200C550CF /* Bolts in Frameworks */ = {isa = PBXBuildFile; fileRef = 344288081AFBEFF200C550CF /* Bolts */; };
 		348080031AFBD77600B36306 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 348080021AFBD77600B36306 /* AudioToolbox.framework */; };
 		348080051AFBD78900B36306 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 348080041AFBD78900B36306 /* CFNetwork.framework */; };
 		348080071AFBD7A500B36306 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 348080061AFBD7A500B36306 /* CoreLocation.framework */; };
@@ -50,6 +52,8 @@
 		30995EE91AFBDB33005266A1 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtils.framework; path = AnimalRescue/ParseFacebookUtils.framework; sourceTree = "<group>"; };
 		30995EEA1AFBDB33005266A1 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtilsV4.framework; path = AnimalRescue/ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
 		30995EEB1AFBDB33005266A1 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = AnimalRescue/ParseUI.framework; sourceTree = "<group>"; };
+		344288061AFBEFB200C550CF /* Parse */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = Parse; path = AnimalRescue/Parse.framework/Parse; sourceTree = "<group>"; };
+		344288081AFBEFF200C550CF /* Bolts */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = Bolts; path = AnimalRescue/Bolts.framework/Bolts; sourceTree = "<group>"; };
 		34807FF61AFBD68300B36306 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = AnimalRescue/Bolts.framework; sourceTree = "<group>"; };
 		34807FF71AFBD68300B36306 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = AnimalRescue/Parse.framework; sourceTree = "<group>"; };
 		348080021AFBD77600B36306 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -85,6 +89,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				344288091AFBEFF200C550CF /* Bolts in Frameworks */,
+				344288071AFBEFB200C550CF /* Parse in Frameworks */,
 				839B8BA01AFBE27F00293590 /* FBAudienceNetwork.framework in Frameworks */,
 				839B8BA11AFBE27F00293590 /* FBSDKCoreKit.framework in Frameworks */,
 				839B8BA21AFBE27F00293590 /* FBSDKLoginKit.framework in Frameworks */,
@@ -127,6 +133,8 @@
 		30995EE21AFBD94F005266A1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				344288081AFBEFF200C550CF /* Bolts */,
+				344288061AFBEFB200C550CF /* Parse */,
 				839B8B9B1AFBE27E00293590 /* FBAudienceNetwork.framework */,
 				839B8B9C1AFBE27F00293590 /* FBSDKCoreKit.framework */,
 				839B8B9D1AFBE27F00293590 /* FBSDKLoginKit.framework */,
@@ -481,6 +489,11 @@
 				);
 				INFOPLIST_FILE = AnimalRescue/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AnimalRescue/Parse.framework",
+					"$(PROJECT_DIR)/AnimalRescue/Bolts.framework",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -496,6 +509,11 @@
 				);
 				INFOPLIST_FILE = AnimalRescue/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AnimalRescue/Parse.framework",
+					"$(PROJECT_DIR)/AnimalRescue/Bolts.framework",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

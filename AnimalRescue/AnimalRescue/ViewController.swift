@@ -9,11 +9,18 @@
 import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
+import Parse
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let testObject = PFObject(className: "TestObject")
+        testObject["foo"] = "bar"
+        testObject.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+            println("Object has been saved.")
+        }
         
         var loginButton: FBSDKLoginButton = FBSDKLoginButton()
         loginButton.center = self.view.center
