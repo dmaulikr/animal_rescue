@@ -24,7 +24,7 @@ class MapViewController: UIViewController , CLLocationManagerDelegate , MKMapVie
         
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
-
+        
         generatePins()
         
         
@@ -43,7 +43,6 @@ class MapViewController: UIViewController , CLLocationManagerDelegate , MKMapVie
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     
