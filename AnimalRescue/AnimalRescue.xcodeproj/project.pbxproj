@@ -58,6 +58,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		30995EDD1AFBD523005266A1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				83676B481AFBCB390080042F /* ViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		30995EDE1AFBD52F005266A1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				83676B4F1AFBCB390080042F /* LaunchScreen.xib */,
+				83676B4A1AFBCB390080042F /* Main.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		30995EDF1AFBD546005266A1 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				83676B451AFBCB390080042F /* AnimalRescue.xcdatamodeld */,
+			);
+			name = "Core Data";
+			sourceTree = "<group>";
+		};
+		30995EE01AFBD56F005266A1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				83676B4D1AFBCB390080042F /* Images.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		30995EE11AFBD57D005266A1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		83676B351AFBCB390080042F = {
 			isa = PBXGroup;
 			children = (
@@ -79,12 +119,12 @@
 		83676B401AFBCB390080042F /* AnimalRescue */ = {
 			isa = PBXGroup;
 			children = (
+				30995EE11AFBD57D005266A1 /* Models */,
 				83676B431AFBCB390080042F /* AppDelegate.swift */,
-				83676B481AFBCB390080042F /* ViewController.swift */,
-				83676B4A1AFBCB390080042F /* Main.storyboard */,
-				83676B4D1AFBCB390080042F /* Images.xcassets */,
-				83676B4F1AFBCB390080042F /* LaunchScreen.xib */,
-				83676B451AFBCB390080042F /* AnimalRescue.xcdatamodeld */,
+				30995EDD1AFBD523005266A1 /* Controllers */,
+				30995EDE1AFBD52F005266A1 /* Views */,
+				30995EE01AFBD56F005266A1 /* Resources */,
+				30995EDF1AFBD546005266A1 /* Core Data */,
 				83676B411AFBCB390080042F /* Supporting Files */,
 			);
 			path = AnimalRescue;
@@ -415,6 +455,7 @@
 				83676B621AFBCB390080042F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		83676B631AFBCB390080042F /* Build configuration list for PBXNativeTarget "AnimalRescueTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +464,7 @@
 				83676B651AFBCB390080042F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
