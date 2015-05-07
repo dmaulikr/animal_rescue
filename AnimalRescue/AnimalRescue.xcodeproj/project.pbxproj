@@ -7,7 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2A7777631AFBD788008BC08D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7777621AFBD788008BC08D /* MapViewController.swift */; };
+		2AB06EDD1AFBE05100E8CA5E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB06EDC1AFBE05100E8CA5E /* MapViewController.swift */; };
+		30995EEC1AFBDB33005266A1 /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30995EE81AFBDB33005266A1 /* ParseCrashReporting.framework */; };
+		30995EED1AFBDB33005266A1 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30995EE91AFBDB33005266A1 /* ParseFacebookUtils.framework */; };
+		30995EEE1AFBDB33005266A1 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30995EEA1AFBDB33005266A1 /* ParseFacebookUtilsV4.framework */; };
+		30995EEF1AFBDB33005266A1 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30995EEB1AFBDB33005266A1 /* ParseUI.framework */; };
+		348080031AFBD77600B36306 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 348080021AFBD77600B36306 /* AudioToolbox.framework */; };
+		348080051AFBD78900B36306 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 348080041AFBD78900B36306 /* CFNetwork.framework */; };
+		348080071AFBD7A500B36306 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 348080061AFBD7A500B36306 /* CoreLocation.framework */; };
+		348080091AFBD7BD00B36306 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 348080081AFBD7BD00B36306 /* MobileCoreServices.framework */; };
+		3480800B1AFBD7CC00B36306 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3480800A1AFBD7CC00B36306 /* QuartzCore.framework */; };
+		3480800D1AFBD7D600B36306 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3480800C1AFBD7D600B36306 /* Security.framework */; };
+		3480800F1AFBD7DF00B36306 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3480800E1AFBD7DF00B36306 /* StoreKit.framework */; };
+		348080111AFBD7EF00B36306 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 348080101AFBD7EF00B36306 /* SystemConfiguration.framework */; };
+		348080131AFBD80900B36306 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 348080121AFBD80900B36306 /* libz.dylib */; };
+		348080151AFBD82E00B36306 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 348080141AFBD82E00B36306 /* libsqlite3.dylib */; };
 		83676B441AFBCB390080042F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83676B431AFBCB390080042F /* AppDelegate.swift */; };
 		83676B471AFBCB390080042F /* AnimalRescue.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 83676B451AFBCB390080042F /* AnimalRescue.xcdatamodeld */; };
 		83676B491AFBCB390080042F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83676B481AFBCB390080042F /* ViewController.swift */; };
@@ -28,7 +42,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2A7777621AFBD788008BC08D /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		2AB06EDC1AFBE05100E8CA5E /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		30995EE81AFBDB33005266A1 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseCrashReporting.framework; path = AnimalRescue/ParseCrashReporting.framework; sourceTree = "<group>"; };
+		30995EE91AFBDB33005266A1 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtils.framework; path = AnimalRescue/ParseFacebookUtils.framework; sourceTree = "<group>"; };
+		30995EEA1AFBDB33005266A1 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtilsV4.framework; path = AnimalRescue/ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
+		30995EEB1AFBDB33005266A1 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = AnimalRescue/ParseUI.framework; sourceTree = "<group>"; };
+		34807FF61AFBD68300B36306 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = AnimalRescue/Bolts.framework; sourceTree = "<group>"; };
+		34807FF71AFBD68300B36306 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = AnimalRescue/Parse.framework; sourceTree = "<group>"; };
+		348080021AFBD77600B36306 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		348080041AFBD78900B36306 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		348080061AFBD7A500B36306 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		348080081AFBD7BD00B36306 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		3480800A1AFBD7CC00B36306 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		3480800C1AFBD7D600B36306 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		3480800E1AFBD7DF00B36306 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		348080101AFBD7EF00B36306 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		348080121AFBD80900B36306 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		348080141AFBD82E00B36306 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		83676B3E1AFBCB390080042F /* AnimalRescue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimalRescue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83676B421AFBCB390080042F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83676B431AFBCB390080042F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				83676B481AFBCB390080042F /* ViewController.swift */,
+				2AB06EDC1AFBE05100E8CA5E /* MapViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -162,12 +193,9 @@
 				30995EE41AFBD979005266A1 /* Controllers */,
 				30995EE11AFBD57D005266A1 /* Models */,
 				83676B431AFBCB390080042F /* AppDelegate.swift */,
-				83676B481AFBCB390080042F /* ViewController.swift */,
-				2A7777621AFBD788008BC08D /* MapViewController.swift */,
-				83676B4A1AFBCB390080042F /* Main.storyboard */,
-				83676B4D1AFBCB390080042F /* Images.xcassets */,
-				83676B4F1AFBCB390080042F /* LaunchScreen.xib */,
-				83676B451AFBCB390080042F /* AnimalRescue.xcdatamodeld */,
+				30995EE31AFBD95D005266A1 /* Views */,
+				30995EE51AFBD9A4005266A1 /* Resources */,
+				30995EE71AFBD9D5005266A1 /* Coredata */,
 				83676B411AFBCB390080042F /* Supporting Files */,
 			);
 			path = AnimalRescue;
@@ -301,7 +329,7 @@
 				83676B491AFBCB390080042F /* ViewController.swift in Sources */,
 				83676B471AFBCB390080042F /* AnimalRescue.xcdatamodeld in Sources */,
 				83676B441AFBCB390080042F /* AppDelegate.swift in Sources */,
-				2A7777631AFBD788008BC08D /* MapViewController.swift in Sources */,
+				2AB06EDD1AFBE05100E8CA5E /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
