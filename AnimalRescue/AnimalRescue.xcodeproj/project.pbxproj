@@ -12,6 +12,7 @@
 		30995EED1AFBDB33005266A1 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30995EE91AFBDB33005266A1 /* ParseFacebookUtils.framework */; };
 		30995EEE1AFBDB33005266A1 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30995EEA1AFBDB33005266A1 /* ParseFacebookUtilsV4.framework */; };
 		30995EEF1AFBDB33005266A1 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30995EEB1AFBDB33005266A1 /* ParseUI.framework */; };
+		30995EF11AFBE0BB005266A1 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30995EF01AFBE0BB005266A1 /* Animal.swift */; };
 		344288071AFBEFB200C550CF /* Parse in Frameworks */ = {isa = PBXBuildFile; fileRef = 344288061AFBEFB200C550CF /* Parse */; };
 		344288091AFBEFF200C550CF /* Bolts in Frameworks */ = {isa = PBXBuildFile; fileRef = 344288081AFBEFF200C550CF /* Bolts */; };
 		348080031AFBD77600B36306 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 348080021AFBD77600B36306 /* AudioToolbox.framework */; };
@@ -54,6 +55,7 @@
 		30995EE91AFBDB33005266A1 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtils.framework; path = AnimalRescue/ParseFacebookUtils.framework; sourceTree = "<group>"; };
 		30995EEA1AFBDB33005266A1 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtilsV4.framework; path = AnimalRescue/ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
 		30995EEB1AFBDB33005266A1 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = AnimalRescue/ParseUI.framework; sourceTree = "<group>"; };
+		30995EF01AFBE0BB005266A1 /* Animal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
 		344288061AFBEFB200C550CF /* Parse */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = Parse; path = AnimalRescue/Parse.framework/Parse; sourceTree = "<group>"; };
 		344288081AFBEFF200C550CF /* Bolts */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = Bolts; path = AnimalRescue/Bolts.framework/Bolts; sourceTree = "<group>"; };
 		34807FF61AFBD68300B36306 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = AnimalRescue/Bolts.framework; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 		30995EE11AFBD57D005266A1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				30995EF01AFBE0BB005266A1 /* Animal.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -357,6 +360,7 @@
 				83676B491AFBCB390080042F /* ViewController.swift in Sources */,
 				83676B471AFBCB390080042F /* AnimalRescue.xcdatamodeld in Sources */,
 				83676B441AFBCB390080042F /* AppDelegate.swift in Sources */,
+				30995EF11AFBE0BB005266A1 /* Animal.swift in Sources */,
 				2AB06EDD1AFBE05100E8CA5E /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
