@@ -19,7 +19,7 @@ class MapViewController: UIViewController , CLLocationManagerDelegate , MKMapVie
     
     
     var animals: NSMutableArray!
-    
+    var localizaçao: CLLocationCoordinate2D!
     
     
     @IBOutlet weak var mapView: MKMapView!
@@ -31,24 +31,20 @@ class MapViewController: UIViewController , CLLocationManagerDelegate , MKMapVie
         
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
-        
         generatePins()
+
         
         
     }
     
     func retrieveAnimalsFromParse(){
-        var retrieve:PFQuery = PFQuery (className: "Animal_Data")
-        
-        
-   //     retrieve.findObjectsInBackgroundWithBlock { (objects:[AnyObject]!, error:NSError) -> Void in
-     //       <#code#>
-     //   }
-        
+    
     }
     
     func generatePins()
     {
+        mapView.showsUserLocation = true
+
         var point = MKPointAnnotation();
         point.coordinate = CLLocationCoordinate2DMake(-30.055548895017466, -51.1751056972908)
         point.title = "Animal Aprisionado"
@@ -56,12 +52,22 @@ class MapViewController: UIViewController , CLLocationManagerDelegate , MKMapVie
         
         mapView.addAnnotation(point)
         mapView.showAnnotations([point], animated: true)
+        
+        if(updateDistanceAnnotation(point))
+        {
+            var localNotification: UILocalNotification = UILocalNotification()
+            localNotification.alertAction = "Testing notifications on iOS8"
+            localNotification.alertBody = "Woww it works!!"
+            localNotification.fireDate = NSDate(timeIntervalSinceNow: 2)
+            UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
+
+        }
+    
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
     
     func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
         if status == CLAuthorizationStatus.AuthorizedWhenInUse  {
@@ -71,10 +77,10 @@ class MapViewController: UIViewController , CLLocationManagerDelegate , MKMapVie
             if let location = locationManager.location?.coordinate {
                 mapView.setCenterCoordinate(location, animated: true)
                 mapView.camera.altitude = pow(2, 11)
+               
             } else {
                 locationManager.startUpdatingLocation()
             }
-            
         }
     }
     
@@ -85,6 +91,34 @@ class MapViewController: UIViewController , CLLocationManagerDelegate , MKMapVie
         if let location = locations.last as? CLLocation {
             mapView.setCenterCoordinate(location.coordinate, animated: true)
             mapView.camera.altitude = pow(2, 11)
+
         }
     }
+    
+        func updateDistanceAnnotation(annotation: MKAnnotation!) -> (Bool)
+    {
+
+        if (annotation == nil)
+        {
+            println("No annotation selected")
+            return false
+        }
+        
+        if (locationManager.location == nil)
+        {
+            println("User location is unknown")
+            return false
+        }
+        
+        var pinLocation = CLLocation(latitude: annotation.coordinate.latitude, longitude: annotation.coordinate.longitude)
+        var userLocation = CLLocation(latitude: locationManager.location.coordinate.latitude, longitude: locationManager.location.coordinate.longitude)
+        var distance = CLLocationDistance(pinLocation.distanceFromLocation(userLocation))
+        
+        println("Distance to point \(distance).")
+        
+        if(distance > 600) {return false}
+        else {return true}
+        
+    }
+    
 }
