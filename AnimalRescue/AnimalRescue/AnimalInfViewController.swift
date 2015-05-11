@@ -32,7 +32,7 @@ class AnimalInfViewController: UIViewController, CLLocationManagerDelegate{
         descriptionLabel.text = animal.an.shortDescription as String
         animalImage.image = animal.an.image
         println("\(animal.an.name)")
-
+        
         
     }
     
@@ -44,44 +44,61 @@ class AnimalInfViewController: UIViewController, CLLocationManagerDelegate{
     @IBAction func releaseAnimal(sender: AnyObject) {
         
         var annotation = MKPointAnnotation()
-        annotation.coordinate = animal.coordinate
+        annotation.coordinate = animal.coordinate // pega a coordenada do animal selecionado
         
-        if(updateDistanceAnnotation(annotation)){
-        var query = PFQuery(className: "_User")
-        query.whereKey("objectId", equalTo: PFUser.currentUser()!.objectId!)
-        
-        query.findObjectsInBackgroundWithBlock { (objects: [AnyObject]?, error: NSError?) -> Void in
+        if(updateDistanceAnnotation(annotation)){ //verifica se o animal selecionado está a menos de 600m
             
-            if error == nil {
-                println("Successfully retrieved \(objects!.count) scores.")
-                // Do something with the found objects
+            //Cristian, verifica isso.
+            
+            
+            
+            var query = PFQuery(className: "_User")
+            query.whereKey("objectId", equalTo: PFUser.currentUser()!.objectId!)
+            
+            query.findObjectsInBackgroundWithBlock { (objects: [AnyObject]?, error: NSError?) -> Void in
                 
-                
-                if let objects = objects as? [PFObject] {
-                    for object in objects {
-                        println(object.objectId)
-                        
-                        if object["keys"] as! NSInteger >= 1{
-                            println("Animal libertado!")
-                            object["keys"] = object["keys"] as! NSInteger - 1
-                            object.saveEventually()
-                        } else {
-                            println("Você não possui chaves suficientes")
+                if error == nil {
+                    println("Successfully retrieved \(objects!.count) scores.")
+                    // Do something with the found objects
+                    
+                    
+                    if let objects = objects as? [PFObject] {
+                        for object in objects {
+                            println(object.objectId)
+                            
+                            if object["keys"] as! NSInteger >= 1{
+                                println("Animal libertado!")
+                                object["keys"] = object["keys"] as! NSInteger - 1
+                                object.saveEventually()
+                                
+                                var alert = UIAlertController(title: "Uhul!", message: "Animal libertado!", preferredStyle: UIAlertControllerStyle.Alert)
+                                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+                                self.presentViewController(alert, animated: true, completion: nil) //alerta para o usuário
+                                
+                            } else {
+                                var alert = UIAlertController(title: "Ops", message: "Você não possui chaves suficientes.", preferredStyle: UIAlertControllerStyle.Alert)
+                                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+                                self.presentViewController(alert, animated: true, completion: nil) //alerta para o usuário
+                                println("Você não possui chaves suficientes")
+                            }
                         }
+                    } else {
+                        println("Usuário não encontrado")
                     }
+                    
+                    
                 } else {
-                    println("Usuário não encontrado")
+                    // Log details of the failure
+                    println("Error: \(error!) \(error!.userInfo!)")
                 }
-                
-                
-            } else {
-                // Log details of the failure
-                println("Error: \(error!) \(error!.userInfo!)")
-            }
             }
         }
         else
         {
+            var alert = UIAlertController(title: "Ops", message: "Você não está perto o suficuente do animal.", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)//alerta para o usuário
+            
             println("Você nao está perto do animal")
         }
     }
