@@ -23,48 +23,26 @@ class MapViewController: UIViewController , CLLocationManagerDelegate , MKMapVie
     
     @IBOutlet weak var mapView: MKMapView!
     var locationManager = CLLocationManager()
-    
+   
+
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+        
         mapView.delegate = self
         
-        
-        
         locationManager.delegate = self
-        locationManager.requestAlwaysAuthorization()
+        locationManager.requestWhenInUseAuthorization()
+        
         generatePins()
-    }
-    
-    func generatePins()
-    {
-        mapView.showsUserLocation = true
-        
-        var point = MKPointAnnotation();
-        point.coordinate = CLLocationCoordinate2DMake(-30.055548895017466, -51.1751056972908)
-        point.title = "Animal Aprisionado"
-        point.subtitle = "Um animal precisa de sua ajuda!"
-        points.addObject(point)
-        mapView.addAnnotation(point)
-        
-        var point1 = MKPointAnnotation();
-        point1.coordinate = CLLocationCoordinate2DMake(-30.054478, -51.196474)
-        point1.title = "Animal Aprisionado"
-        point1.subtitle = "Um animal precisa de sua ajuda!"
-        
-        points.addObject(point)
-        mapView.addAnnotation(point)
-        
-        points.addObject(point1)
-        mapView.addAnnotation(point1)
-        
-        for(var i = 0; i < points.count; i++){
-            mapView.showAnnotations([points[i]], animated: true)
-        }
         
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
     func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
@@ -75,6 +53,7 @@ class MapViewController: UIViewController , CLLocationManagerDelegate , MKMapVie
             if let location = locationManager.location?.coordinate {
                 mapView.setCenterCoordinate(location, animated: true)
                 mapView.camera.altitude = pow(2, 11)
+                
                 
                 for(var i = 0; i<points.count; i++){
                     if(updateDistanceAnnotation(points[i] as! MKPointAnnotation))
@@ -95,21 +74,29 @@ class MapViewController: UIViewController , CLLocationManagerDelegate , MKMapVie
                         self.presentViewController(alert, animated: true, completion: nil)
                         
                     }
+
                 }
-                
             } else {
                 locationManager.startUpdatingLocation()
             }
+            
         }
     }
+    
+    
+    
+    
+    
+    
+    
     
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
         
         locationManager.stopUpdatingLocation()
+        
         if let location = locations.last as? CLLocation {
             mapView.setCenterCoordinate(location.coordinate, animated: true)
             mapView.camera.altitude = pow(2, 11)
-            
         }
     }
     
@@ -139,43 +126,41 @@ class MapViewController: UIViewController , CLLocationManagerDelegate , MKMapVie
         
     }
     
-    func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
+    func generatePins() //alterar
+    {
+        mapView.showsUserLocation = true
         
-        var identifier = "CustomAnnotation"
-        
-        if annotation.isKindOfClass(MKUserLocation) {
-            return nil
+        Animal.retrieveAllAnimals { ([Animal]) -> () in
+
         }
         
-        if annotation.isKindOfClass(MKPointAnnotation) {
-            var pin = mapView.dequeueReusableAnnotationViewWithIdentifier(identifier)
-            
-            if pin == nil {
-                
-                
-                pin = MKAnnotationView(annotation: annotation, reuseIdentifier: identifier)
-                pin.image = UIImage(named: "cageBlank")
-                pin.centerOffset = CGPointMake(0, -10)
-                pin.canShowCallout = true
-                
-                
- 
-                var button = UIButton.buttonWithType(.DetailDisclosure) as! UIButton
-                pin!.leftCalloutAccessoryView = button
-                
-                var image = UIImageView(image: UIImage(named: "cageBlank"))
-                pin!.rightCalloutAccessoryView = image
-                
-                
-            } else {
-                pin!.annotation = annotation
-            }
-            
-            return pin
-        }
         
-        return nil
+        var point = MKPointAnnotation();
+        point.coordinate = CLLocationCoordinate2DMake(-30.055548895017466, -51.1751056972908)
+        point.title = "Animal Aprisionado"
+        point.subtitle = "Um animal precisa de sua ajuda!"
+        points.addObject(point)
+        mapView.addAnnotation(point)
+        
+        var point1 = MKPointAnnotation();
+        point1.coordinate = CLLocationCoordinate2DMake(-30.054478, -51.196474)
+        point1.title = "Animal Aprisionado"
+        point1.subtitle = "Um animal precisa de sua ajuda!"
+        
+        points.addObject(point)
+        mapView.addAnnotation(point)
+        
+        points.addObject(point1)
+        mapView.addAnnotation(point1)
+        
+        for(var i = 0; i < points.count; i++){
+            mapView.showAnnotations([points[i]], animated: true)
+        }
         
     }
     
+    
+    
+
 }
+
