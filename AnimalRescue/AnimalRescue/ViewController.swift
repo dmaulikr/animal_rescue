@@ -86,6 +86,7 @@ class ViewController: UIViewController {
             user.username = signUpNameTextField.text
             user.password = signUpPasswordTextField.text
             user.email = signUpEmailTextField.text
+            user["keys"] = 10
             
             user.signUpInBackgroundWithBlock { (succeeded: Bool, error: NSError?) -> Void in
                 if let error = error {
@@ -105,6 +106,8 @@ class ViewController: UIViewController {
                         alert.message = "Usuário criado com sucesso"
                         alert.addButtonWithTitle("\\o/")
                         alert.show()
+                        
+                        
                         
                         self.signUpNameTextField.text = ""
                         self.signUpPasswordTextField.text = ""
