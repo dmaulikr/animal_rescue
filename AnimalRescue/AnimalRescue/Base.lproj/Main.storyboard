@@ -197,7 +197,36 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yLN-4Z-AMB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="894" y="1361"/>
+            <point key="canvasLocation" x="452" y="1345"/>
+        </scene>
+        <!--Purchase View Controller-->
+        <scene sceneID="POs-yJ-VEz">
+            <objects>
+                <viewController id="gjh-zI-yZc" customClass="IAPurchaseViewController" customModule="AnimalRescue" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pY6-5T-sTO"/>
+                        <viewControllerLayoutGuide type="bottom" id="myp-5U-h6W"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dp2-rF-rc8">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RMe-Sv-0ZF">
+                                <rect key="frame" x="223" y="267" width="155" height="65"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="BuyButtonPressed:" destination="gjh-zI-yZc" eventType="touchUpInside" id="qHc-e9-7A0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P1v-uf-s5A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1223" y="1345"/>
         </scene>
     </scenes>
 </document>
