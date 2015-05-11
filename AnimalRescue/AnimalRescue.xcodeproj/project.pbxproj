@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A0CF8421B0118B3006C0E92 /* AnimalAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0CF8411B0118B3006C0E92 /* AnimalAnnotation.swift */; };
 		2AB06EDD1AFBE05100E8CA5E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB06EDC1AFBE05100E8CA5E /* MapViewController.swift */; };
 		30995EEC1AFBDB33005266A1 /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30995EE81AFBDB33005266A1 /* ParseCrashReporting.framework */; };
 		30995EED1AFBDB33005266A1 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30995EE91AFBDB33005266A1 /* ParseFacebookUtils.framework */; };
@@ -50,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A0CF8411B0118B3006C0E92 /* AnimalAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalAnnotation.swift; sourceTree = "<group>"; };
 		2AB06EDC1AFBE05100E8CA5E /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		30995EE81AFBDB33005266A1 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseCrashReporting.framework; path = AnimalRescue/ParseCrashReporting.framework; sourceTree = "<group>"; };
 		30995EE91AFBDB33005266A1 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtils.framework; path = AnimalRescue/ParseFacebookUtils.framework; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				30995EF01AFBE0BB005266A1 /* Animal.swift */,
+				2A0CF8411B0118B3006C0E92 /* AnimalAnnotation.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -366,6 +369,7 @@
 				83676B471AFBCB390080042F /* AnimalRescue.xcdatamodeld in Sources */,
 				83676B441AFBCB390080042F /* AppDelegate.swift in Sources */,
 				30995EF11AFBE0BB005266A1 /* Animal.swift in Sources */,
+				2A0CF8421B0118B3006C0E92 /* AnimalAnnotation.swift in Sources */,
 				2AB06EDD1AFBE05100E8CA5E /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
