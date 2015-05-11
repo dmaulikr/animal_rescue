@@ -39,6 +39,7 @@
 		839B8BA21AFBE27F00293590 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 839B8B9D1AFBE27F00293590 /* FBSDKLoginKit.framework */; };
 		839B8BA31AFBE27F00293590 /* FBSDKMessengerShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 839B8B9E1AFBE27F00293590 /* FBSDKMessengerShareKit.framework */; };
 		839B8BA41AFBE27F00293590 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 839B8B9F1AFBE27F00293590 /* FBSDKShareKit.framework */; };
+		83EA8CE41B0115D300E026C6 /* IAPurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EA8CE31B0115D300E026C6 /* IAPurchaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,7 @@
 		839B8B9D1AFBE27F00293590 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = AnimalRescue/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		839B8B9E1AFBE27F00293590 /* FBSDKMessengerShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKMessengerShareKit.framework; path = AnimalRescue/FBSDKMessengerShareKit.framework; sourceTree = "<group>"; };
 		839B8B9F1AFBE27F00293590 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = AnimalRescue/FBSDKShareKit.framework; sourceTree = "<group>"; };
+		83EA8CE31B0115D300E026C6 /* IAPurchaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPurchaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +187,7 @@
 				2AB06EDC1AFBE05100E8CA5E /* MapViewController.swift */,
 				3066E5AF1B011FD600F11D79 /* SavedAnimalsController.swift */,
 				3066E5B11B012A2000F11D79 /* BasicCellView.swift */,
+				83EA8CE31B0115D300E026C6 /* IAPurchaseViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -312,11 +315,7 @@
 				TargetAttributes = {
 					83676B3D1AFBCB390080042F = {
 						CreatedOnToolsVersion = 6.3.1;
-						SystemCapabilities = {
-							com.apple.BackgroundModes = {
-								enabled = 1;
-							};
-						};
+						DevelopmentTeam = 33CFWY4E28;
 					};
 					83676B551AFBCB390080042F = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -371,6 +370,7 @@
 				83676B491AFBCB390080042F /* ViewController.swift in Sources */,
 				83676B471AFBCB390080042F /* AnimalRescue.xcdatamodeld in Sources */,
 				83676B441AFBCB390080042F /* AppDelegate.swift in Sources */,
+				83EA8CE41B0115D300E026C6 /* IAPurchaseViewController.swift in Sources */,
 				30995EF11AFBE0BB005266A1 /* Animal.swift in Sources */,
 				2AB06EDD1AFBE05100E8CA5E /* MapViewController.swift in Sources */,
 				3066E5B21B012A2000F11D79 /* BasicCellView.swift in Sources */,
@@ -503,6 +503,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/AnimalRescue",
@@ -516,7 +518,7 @@
 					"$(PROJECT_DIR)/AnimalRescue/Bolts.framework",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -524,6 +526,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/AnimalRescue",
@@ -537,7 +541,7 @@
 					"$(PROJECT_DIR)/AnimalRescue/Bolts.framework",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
