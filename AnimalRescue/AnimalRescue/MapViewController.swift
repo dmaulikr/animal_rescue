@@ -191,8 +191,8 @@ class MapViewController: UIViewController , CLLocationManagerDelegate , MKMapVie
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if segue.identifier == "goToInf" {
-           // var vc = segue.destinationViewControlle as! AnimalInfViewController
-           // vc.animalClicked = animalClicked
+            var vc =  segue.destinationViewController as! AnimalInfViewController
+            vc.animal = animalClicked
         }
         
     }

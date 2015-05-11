@@ -11,12 +11,20 @@ import UIKit
 
 class AnimalInfViewController: UIViewController{
     
-    var animalClicked: AnimalAnnotation = AnimalAnnotation()
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var animalImage: UIImageView!
+    
+    
+    
+    var animal: AnimalAnnotation = AnimalAnnotation()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        println("\(animalClicked.an.name)")
+        nameLabel.text = animal.an.name as String
+        descriptionLabel.text = animal.an.shortDescription as String
+        animalImage.image = animal.an.image
+        println("\(animal.an.name)")
 
         
     }
@@ -24,6 +32,10 @@ class AnimalInfViewController: UIViewController{
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    @IBAction func releaseAnimal(sender: AnyObject) {
+        
+        
     }
     
 }
