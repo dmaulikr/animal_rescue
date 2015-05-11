@@ -387,6 +387,8 @@
 				2A0CF8421B0118B3006C0E92 /* AnimalAnnotation.swift in Sources */,
 				2AD09E891B0132C000E34DF6 /* AnimalInfViewController.swift in Sources */,
 				2AB06EDD1AFBE05100E8CA5E /* MapViewController.swift in Sources */,
+				3066E5B21B012A2000F11D79 /* BasicCellView.swift in Sources */,
+				3066E5B01B011FD600F11D79 /* SavedAnimalsController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
