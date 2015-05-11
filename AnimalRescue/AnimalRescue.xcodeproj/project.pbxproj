@@ -508,6 +508,7 @@
 					"$(PROJECT_DIR)/AnimalRescue/Bolts.framework",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Debug;
 		};
@@ -528,6 +529,7 @@
 					"$(PROJECT_DIR)/AnimalRescue/Bolts.framework",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
 		};
