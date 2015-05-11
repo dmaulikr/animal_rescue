@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		2A0CF8421B0118B3006C0E92 /* AnimalAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0CF8411B0118B3006C0E92 /* AnimalAnnotation.swift */; };
 		2AB06EDD1AFBE05100E8CA5E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB06EDC1AFBE05100E8CA5E /* MapViewController.swift */; };
+		2AD09E831B01282800E34DF6 /* Leão.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2AD09E821B01282800E34DF6 /* Leão.jpg */; };
+		2AD09E861B0128E100E34DF6 /* Ovelha.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2AD09E841B0128E100E34DF6 /* Ovelha.jpg */; };
+		2AD09E871B0128E100E34DF6 /* Cobra.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2AD09E851B0128E100E34DF6 /* Cobra.jpg */; };
+		2AD09E891B0132C000E34DF6 /* AnimalInfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD09E881B0132C000E34DF6 /* AnimalInfViewController.swift */; };
 		30995EEC1AFBDB33005266A1 /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30995EE81AFBDB33005266A1 /* ParseCrashReporting.framework */; };
 		30995EED1AFBDB33005266A1 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30995EE91AFBDB33005266A1 /* ParseFacebookUtils.framework */; };
 		30995EEE1AFBDB33005266A1 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30995EEA1AFBDB33005266A1 /* ParseFacebookUtilsV4.framework */; };
@@ -54,6 +58,10 @@
 /* Begin PBXFileReference section */
 		2A0CF8411B0118B3006C0E92 /* AnimalAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalAnnotation.swift; sourceTree = "<group>"; };
 		2AB06EDC1AFBE05100E8CA5E /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		2AD09E821B01282800E34DF6 /* Leão.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Leão.jpg"; sourceTree = "<group>"; };
+		2AD09E841B0128E100E34DF6 /* Ovelha.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Ovelha.jpg; sourceTree = "<group>"; };
+		2AD09E851B0128E100E34DF6 /* Cobra.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Cobra.jpg; sourceTree = "<group>"; };
+		2AD09E881B0132C000E34DF6 /* AnimalInfViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalInfViewController.swift; sourceTree = "<group>"; };
 		30995EE81AFBDB33005266A1 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseCrashReporting.framework; path = AnimalRescue/ParseCrashReporting.framework; sourceTree = "<group>"; };
 		30995EE91AFBDB33005266A1 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtils.framework; path = AnimalRescue/ParseFacebookUtils.framework; sourceTree = "<group>"; };
 		30995EEA1AFBDB33005266A1 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtilsV4.framework; path = AnimalRescue/ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
@@ -184,6 +192,7 @@
 			children = (
 				83676B481AFBCB390080042F /* ViewController.swift */,
 				2AB06EDC1AFBE05100E8CA5E /* MapViewController.swift */,
+				2AD09E881B0132C000E34DF6 /* AnimalInfViewController.swift */,
 				83EA8CE31B0115D300E026C6 /* IAPurchaseViewController.swift */,
 			);
 			name = Controllers;
@@ -193,6 +202,9 @@
 			isa = PBXGroup;
 			children = (
 				83676B4D1AFBCB390080042F /* Images.xcassets */,
+				2AD09E821B01282800E34DF6 /* Leão.jpg */,
+				2AD09E841B0128E100E34DF6 /* Ovelha.jpg */,
+				2AD09E851B0128E100E34DF6 /* Cobra.jpg */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -344,6 +356,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AD09E831B01282800E34DF6 /* Leão.jpg in Resources */,
+				2AD09E871B0128E100E34DF6 /* Cobra.jpg in Resources */,
+				2AD09E861B0128E100E34DF6 /* Ovelha.jpg in Resources */,
 				83676B4C1AFBCB390080042F /* Main.storyboard in Resources */,
 				83676B511AFBCB390080042F /* LaunchScreen.xib in Resources */,
 				83676B4E1AFBCB390080042F /* Images.xcassets in Resources */,
@@ -370,6 +385,7 @@
 				83EA8CE41B0115D300E026C6 /* IAPurchaseViewController.swift in Sources */,
 				30995EF11AFBE0BB005266A1 /* Animal.swift in Sources */,
 				2A0CF8421B0118B3006C0E92 /* AnimalAnnotation.swift in Sources */,
+				2AD09E891B0132C000E34DF6 /* AnimalInfViewController.swift in Sources */,
 				2AB06EDD1AFBE05100E8CA5E /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

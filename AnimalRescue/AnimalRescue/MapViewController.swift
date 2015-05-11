@@ -16,7 +16,7 @@ import Parse
 
 class MapViewController: UIViewController , CLLocationManagerDelegate , MKMapViewDelegate{
     
-    
+    var animalClicked: AnimalAnnotation = AnimalAnnotation()
     
     var animals: NSMutableArray!
     var points: NSMutableArray = NSMutableArray()
@@ -160,8 +160,10 @@ class MapViewController: UIViewController , CLLocationManagerDelegate , MKMapVie
                 
                 let cpa = annotation as! AnimalAnnotation
                 
-                var image = UIImageView(image: cpa.an.image)
-                pin!.leftCalloutAccessoryView = image
+                println("\(cpa.an.name)")
+                pin!.leftCalloutAccessoryView = UIImageView(image: UIImage(named: "\(cpa.an.name).jpg"))
+
+                pin!.rightCalloutAccessoryView = UIButton.buttonWithType(.DetailDisclosure) as! UIButton
                 
                 
             } else {
@@ -172,6 +174,26 @@ class MapViewController: UIViewController , CLLocationManagerDelegate , MKMapVie
         }
         
         return nil
+    }
+    
+    func mapView(mapView: MKMapView!, annotationView view: MKAnnotationView!, calloutAccessoryControlTapped control: UIControl!) {
+        
+        if control is UIButton {
+            
+            
+            animalClicked = view.annotation as! AnimalAnnotation
+            
+            performSegueWithIdentifier("goToInf", sender: self)
+        }
+        
+    }
+    
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if segue.identifier == "goToInf" {
+            var vc = segue.destinationViewControlle as! AnimalInfViewController
+            vc.animalClicked = animalClicked
+        }
         
     }
 }
