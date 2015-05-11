@@ -19,6 +19,8 @@ class IAPurchaseViewController: UIViewController, SKProductsRequestDelegate, SKP
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        println(PFUser.currentUser())
+        
         SKPaymentQueue.defaultQueue().addTransactionObserver(self)
         
         if(SKPaymentQueue.canMakePayments()) {
@@ -83,20 +85,35 @@ class IAPurchaseViewController: UIViewController, SKProductsRequestDelegate, SKP
 //        } else {
 //            println("Not allowed to buy")
 //        }
+                            
     }
     
     
     func addCoins (){
-//        var user = PFUser.currentUser()
-//        
-//        if (user?.objectForKey("keys") >= 1) {
+            
+        var query = PFQuery(className: "user")
+        query.whereKey("objectId", equalTo: PFUser.currentUser()!.objectId!)
+        
+        query.findObjectsInBackgroundWithBlock { (objects: [AnyObject]?, error: NSError?) -> Void in
+                        
+            if error == nil {
+                println("Successfully retrieved \(objects!.count) scores.")
+                // Do something with the found objects
+                        
+            } else {
+                // Log details of the failure
+                println("Error: \(error!) \(error!.userInfo!)")
+            }
+        }
+//            
+//        if (quantKeys >= 1) {
 //            println("Animal libertado")
 //            user?.objectForKey("keys") = user?.objectForKey("keys") - 1
 //            (user["animalsReleased"] as NSArray).append
 //        } else {
 //            println("você não tem keys suficientes")
 //        }
-//        
+        
         
     }
     
