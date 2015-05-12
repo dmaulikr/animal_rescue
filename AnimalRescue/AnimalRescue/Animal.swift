@@ -52,8 +52,10 @@ class Animal: NSObject {
                         
                         var img = basicData?.objectForKey("image") as! PFFile
                         
+                        var userId = allData.objectForKey("userID") as! NSString
                         
-                        var animal = Animal(animalId: basicData?.objectForKey("animalID") as! NSNumber, name: basicData?.objectForKey("name") as! NSString, shortDescription: basicData?.objectForKey("shortDescription") as! NSString, image: UIImage(data: img.getData()!)!, position: (lat: position.latitude, long: position.longitude), userID:allData.objectForKey("userID") as! NSString )
+                        
+                        var animal = Animal(animalId: basicData?.objectForKey("animalID") as! NSNumber, name: basicData?.objectForKey("name") as! NSString, shortDescription: basicData?.objectForKey("shortDescription") as! NSString, image: UIImage(data: img.getData()!)!, position: (lat: position.latitude, long: position.longitude), userID: userId)
                         dataAnimals.append(animal)
                     }
                     
@@ -81,7 +83,48 @@ class Animal: NSObject {
                 print("error = \(error!) \(error!.userInfo!)")
             }
         }
-    }    
+    }
+    
+    
+    class func retrieveAnimalByUserId(userID:String, callback:([Animal]) -> ()) {
+        var animalsDataQuery = PFQuery(className: "Animal_Data")
+        var basicQuery = PFQuery(className: "Animal_Basics")
+        
+        if (userID != PFUser.currentUser()!.objectId!) {
+            animalsDataQuery.whereKey("userID", equalTo: PFUser.currentUser()!.objectId!)
+        } else {
+            animalsDataQuery.whereKey("userID", equalTo: userID)
+            
+            
+            animalsDataQuery.findObjectsInBackgroundWithBlock { (animalsData: [AnyObject]?, error:NSError?)-> Void in
+                dispatch_async(dispatch_get_global_queue(QOS_CLASS_BACKGROUND, 0), { () -> Void in
+                    if error == nil {
+                        var dataAnimals:[Animal] = []
+                        
+                        for allData in animalsData! {
+                            basicQuery.whereKey("animalID", equalTo: allData.objectForKey("animalID")!)
+                            var basicData = basicQuery.getFirstObject()
+                            var position = allData.objectForKey("position") as! PFGeoPoint
+                            
+                            var img = basicData?.objectForKey("image") as! PFFile
+                            
+                            var userId = allData.objectForKey("userID") as! NSString
+                            
+                            
+                            var animal = Animal(animalId: basicData?.objectForKey("animalID") as! NSNumber, name: basicData?.objectForKey("name") as! NSString, shortDescription: basicData?.objectForKey("shortDescription") as! NSString, image: UIImage(data: img.getData()!)!, position: (lat: position.latitude, long: position.longitude), userID: userId)
+                            dataAnimals.append(animal)
+                        }
+                        
+                        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                            callback(dataAnimals)
+                        })
+                    } else {
+                        print("error = \(error!) \(error!.userInfo!)")
+                    }
+                })
+            }
+        }
+    }
     
 //    class func retrieveAnimalByPosition(position:(lat:Double, long:Double)) {
 //        var animalsDataQuery = PFQuery(className: "Animal_Data")
