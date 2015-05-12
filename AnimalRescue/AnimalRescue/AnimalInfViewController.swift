@@ -85,7 +85,7 @@ class AnimalInfViewController: UIViewController, CLLocationManagerDelegate{
                                                 object["userID"] = PFUser.currentUser()!.objectId!
                                                 self.animal.an.usrID = PFUser.currentUser()!.objectId!
                                                 object.saveEventually()
-                                                
+    
                                                 var alert = UIAlertController(title: "Uhul!", message: "Animal libertado!", preferredStyle: UIAlertControllerStyle.Alert)
                                                 
                                                 
@@ -99,15 +99,11 @@ class AnimalInfViewController: UIViewController, CLLocationManagerDelegate{
                                                         
                                                     case .Cancel:
                                                         println("cancel")
-                                                        self.navigationController?.popViewControllerAnimated(true)
                                                         
                                                     case .Destructive:
                                                         println("destructive")
-                                                        self.navigationController?.popViewControllerAnimated(true)
                                                     }
                                                 }))
-                                                
-                                                self.navigationController?.popViewControllerAnimated(true)
                                                 
                                                 
                                                 

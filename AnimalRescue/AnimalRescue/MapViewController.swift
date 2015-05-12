@@ -18,6 +18,8 @@ class MapViewController: UIViewController , CLLocationManagerDelegate , MKMapVie
     
     var animalClicked: AnimalAnnotation = AnimalAnnotation()
     
+
+    @IBOutlet weak var keysLbl: UILabel!
     var animals: NSMutableArray!
     var points: NSMutableArray = NSMutableArray()
     
@@ -32,6 +34,8 @@ class MapViewController: UIViewController , CLLocationManagerDelegate , MKMapVie
         println("did")
         
         if(mapView.annotations.count != 0){
+            var keys =  PFUser.currentUser()?.objectForKey("keys") as! NSNumber
+            self.keysLbl.text = "x\(keys.stringValue)"
                 mapView.removeAnnotations(mapView.annotations)
                 generatePins()
             }
@@ -45,7 +49,9 @@ class MapViewController: UIViewController , CLLocationManagerDelegate , MKMapVie
         
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
-        
+        var keys =  PFUser.currentUser()?.objectForKey("keys") as! NSNumber
+        println("\(keys.stringValue)")
+       self.keysLbl.text = "x\(keys.stringValue)"
         generatePins()
         
     }
