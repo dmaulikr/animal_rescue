@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class SavedAnimalsController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
@@ -28,8 +29,10 @@ class SavedAnimalsController: UIViewController,UITableViewDelegate,UITableViewDa
         tableView.dataSource = self
         tableView.delegate = self
         
-        Animal.retrieveAllAnimals {
-            (allAnimals) in
+        var userID = PFUser.currentUser()?.objectId!
+        
+        Animal.retrieveAnimalByUserId(userID!) {
+                (allAnimals) in
             self.animals = allAnimals
         }
     }
@@ -52,6 +55,13 @@ class SavedAnimalsController: UIViewController,UITableViewDelegate,UITableViewDa
     
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        var id = indexPath.row + 1
+        
+        Animal.retrieveAnimalById(id){
+            (animalData) in
+            print(animalData?.name)
+        }
+        
         
     }
     

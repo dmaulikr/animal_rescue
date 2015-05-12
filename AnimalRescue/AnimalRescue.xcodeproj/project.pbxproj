@@ -10,6 +10,7 @@
 		2A0CF8421B0118B3006C0E92 /* AnimalAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0CF8411B0118B3006C0E92 /* AnimalAnnotation.swift */; };
 		2AB06EDD1AFBE05100E8CA5E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB06EDC1AFBE05100E8CA5E /* MapViewController.swift */; };
 		2AD09E891B0132C000E34DF6 /* AnimalInfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD09E881B0132C000E34DF6 /* AnimalInfViewController.swift */; };
+		304348C91B0269A4000E1A8D /* SavedAnimalsInfoControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304348C81B0269A4000E1A8D /* SavedAnimalsInfoControler.swift */; };
 		3066E5B01B011FD600F11D79 /* SavedAnimalsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3066E5AF1B011FD600F11D79 /* SavedAnimalsController.swift */; };
 		3066E5B21B012A2000F11D79 /* BasicCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3066E5B11B012A2000F11D79 /* BasicCellView.swift */; };
 		30995EEC1AFBDB33005266A1 /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30995EE81AFBDB33005266A1 /* ParseCrashReporting.framework */; };
@@ -58,6 +59,7 @@
 		2A0CF8411B0118B3006C0E92 /* AnimalAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalAnnotation.swift; sourceTree = "<group>"; };
 		2AB06EDC1AFBE05100E8CA5E /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		2AD09E881B0132C000E34DF6 /* AnimalInfViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalInfViewController.swift; sourceTree = "<group>"; };
+		304348C81B0269A4000E1A8D /* SavedAnimalsInfoControler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedAnimalsInfoControler.swift; sourceTree = "<group>"; };
 		3066E5AF1B011FD600F11D79 /* SavedAnimalsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedAnimalsController.swift; sourceTree = "<group>"; };
 		3066E5B11B012A2000F11D79 /* BasicCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicCellView.swift; sourceTree = "<group>"; };
 		30995EE81AFBDB33005266A1 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseCrashReporting.framework; path = AnimalRescue/ParseCrashReporting.framework; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 				2AD09E881B0132C000E34DF6 /* AnimalInfViewController.swift */,
 				83C88E3C1B0289D300A7E30C /* iBeaconViewController.swift */,
 				83EA8CE31B0115D300E026C6 /* IAPurchaseViewController.swift */,
+				304348C81B0269A4000E1A8D /* SavedAnimalsInfoControler.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -360,6 +363,7 @@
 				83C88E3D1B0289D300A7E30C /* iBeaconViewController.swift in Sources */,
 				83EA8CE41B0115D300E026C6 /* IAPurchaseViewController.swift in Sources */,
 				30995EF11AFBE0BB005266A1 /* Animal.swift in Sources */,
+				304348C91B0269A4000E1A8D /* SavedAnimalsInfoControler.swift in Sources */,
 				2A0CF8421B0118B3006C0E92 /* AnimalAnnotation.swift in Sources */,
 				2AD09E891B0132C000E34DF6 /* AnimalInfViewController.swift in Sources */,
 				2AB06EDD1AFBE05100E8CA5E /* MapViewController.swift in Sources */,
