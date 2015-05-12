@@ -21,8 +21,7 @@
 		30995EF11AFBE0BB005266A1 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30995EF01AFBE0BB005266A1 /* Animal.swift */; };
 		344288071AFBEFB200C550CF /* Parse in Frameworks */ = {isa = PBXBuildFile; fileRef = 344288061AFBEFB200C550CF /* Parse */; };
 		344288091AFBEFF200C550CF /* Bolts in Frameworks */ = {isa = PBXBuildFile; fileRef = 344288081AFBEFF200C550CF /* Bolts */; };
-		3442880D1B025A7800C550CF /* Leão.png in Resources */ = {isa = PBXBuildFile; fileRef = 3442880C1B025A7800C550CF /* Leão.png */; };
-		3442880F1B025AC700C550CF /* Leão.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3442880E1B025AC700C550CF /* Leão.jpg */; };
+		344288111B025C7C00C550CF /* Leão.png in Resources */ = {isa = PBXBuildFile; fileRef = 344288101B025C7C00C550CF /* Leão.png */; };
 		348080031AFBD77600B36306 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 348080021AFBD77600B36306 /* AudioToolbox.framework */; };
 		348080051AFBD78900B36306 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 348080041AFBD78900B36306 /* CFNetwork.framework */; };
 		348080071AFBD7A500B36306 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 348080061AFBD7A500B36306 /* CoreLocation.framework */; };
@@ -72,8 +71,7 @@
 		30995EF01AFBE0BB005266A1 /* Animal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
 		344288061AFBEFB200C550CF /* Parse */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = Parse; path = AnimalRescue/Parse.framework/Parse; sourceTree = "<group>"; };
 		344288081AFBEFF200C550CF /* Bolts */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = Bolts; path = AnimalRescue/Bolts.framework/Bolts; sourceTree = "<group>"; };
-		3442880C1B025A7800C550CF /* Leão.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Leão.png"; sourceTree = "<group>"; };
-		3442880E1B025AC700C550CF /* Leão.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Leão.jpg"; sourceTree = "<group>"; };
+		344288101B025C7C00C550CF /* Leão.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Leão.png"; sourceTree = "<group>"; };
 		34807FF61AFBD68300B36306 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = AnimalRescue/Bolts.framework; sourceTree = "<group>"; };
 		34807FF71AFBD68300B36306 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = AnimalRescue/Parse.framework; sourceTree = "<group>"; };
 		348080021AFBD77600B36306 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -208,8 +206,7 @@
 			children = (
 				83676B4D1AFBCB390080042F /* Images.xcassets */,
 				2AD09E841B0128E100E34DF6 /* Ovelha.jpg */,
-				3442880C1B025A7800C550CF /* Leão.png */,
-				3442880E1B025AC700C550CF /* Leão.jpg */,
+				344288101B025C7C00C550CF /* Leão.png */,
 				2AD09E851B0128E100E34DF6 /* Cobra.jpg */,
 			);
 			name = Resources;
@@ -344,9 +341,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3442880D1B025A7800C550CF /* Leão.png in Resources */,
+				344288111B025C7C00C550CF /* Leão.png in Resources */,
 				2AD09E871B0128E100E34DF6 /* Cobra.jpg in Resources */,
-				3442880F1B025AC700C550CF /* Leão.jpg in Resources */,
 				2AD09E861B0128E100E34DF6 /* Ovelha.jpg in Resources */,
 				83676B4C1AFBCB390080042F /* Main.storyboard in Resources */,
 				83676B511AFBCB390080042F /* LaunchScreen.xib in Resources */,
