@@ -226,7 +226,7 @@ class MapViewController: UIViewController , CLLocationManagerDelegate , MKMapVie
     
     func locationManager(manager: CLLocationManager!, didEnterRegion region: CLRegion!) {
         locationManager.startRangingBeaconsInRegion(region as! CLBeaconRegion)
-        
+        println("Beacon encontrado")
         self.performSegueWithIdentifier("goToGetFreeKeys", sender: self)
     }
     
