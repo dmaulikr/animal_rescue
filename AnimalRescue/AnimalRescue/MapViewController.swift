@@ -30,8 +30,11 @@ class MapViewController: UIViewController , CLLocationManagerDelegate , MKMapVie
 
     override func viewDidAppear(animated: Bool) {
         println("did")
-        mapView.removeAnnotations(mapView.annotations)
-        generatePins()
+        
+        if(mapView.annotations.count != 0){
+                mapView.removeAnnotations(mapView.annotations)
+                generatePins()
+            }
         }
 
     override func viewDidLoad() {
