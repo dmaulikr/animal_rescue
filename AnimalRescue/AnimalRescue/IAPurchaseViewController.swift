@@ -85,35 +85,42 @@ class IAPurchaseViewController: UIViewController, SKProductsRequestDelegate, SKP
 //        } else {
 //            println("Not allowed to buy")
 //        }
-                            
+
+        //
     }
     
     
-    func addCoins (){
+    func addKeys (){
             
-        var query = PFQuery(className: "user")
+        var query = PFQuery(className: "_User")
         query.whereKey("objectId", equalTo: PFUser.currentUser()!.objectId!)
         
         query.findObjectsInBackgroundWithBlock { (objects: [AnyObject]?, error: NSError?) -> Void in
-                        
+            
             if error == nil {
                 println("Successfully retrieved \(objects!.count) scores.")
                 // Do something with the found objects
+                
+                
+                if let objects = objects as? [PFObject] {
+                    for object in objects {
                         
+                        println(object.objectId)
+                        println("Ele comprou 10 chaves \\o/")
+                        object["keys"] = object["keys"] as! NSInteger + 10
+                        object.saveEventually()
+                        
+                    }
+                } else {
+                    println("Usuário não encontrado")
+                }
+                
+                
             } else {
                 // Log details of the failure
                 println("Error: \(error!) \(error!.userInfo!)")
             }
         }
-//            
-//        if (quantKeys >= 1) {
-//            println("Animal libertado")
-//            user?.objectForKey("keys") = user?.objectForKey("keys") - 1
-//            (user["animalsReleased"] as NSArray).append
-//        } else {
-//            println("você não tem keys suficientes")
-//        }
-        
         
     }
     
