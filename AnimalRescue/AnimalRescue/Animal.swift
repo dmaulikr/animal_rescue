@@ -20,16 +20,17 @@ class Animal: NSObject {
     var shortDescription:NSString
     var image:UIImage
     var position:(lat:Double, long:Double)
-    
+    var usrID: NSString
     
     // MARK: - Init
-    init(animalId:NSNumber, name:NSString, shortDescription:NSString, image:UIImage, position:(lat: Double, long:Double)) {
+    init(animalId:NSNumber, name:NSString, shortDescription:NSString, image:UIImage, position:(lat: Double, long:Double), userID: NSString) {
         self.id = animalId
         self.name = name
         self.shortDescription = shortDescription
         self.image = image
         self.position.lat = position.lat
         self.position.long = position.long
+        self.usrID = userID
     }
     
     
@@ -52,7 +53,7 @@ class Animal: NSObject {
                         var img = basicData?.objectForKey("image") as! PFFile
                         
                         
-                        var animal = Animal(animalId: basicData?.objectForKey("animalID") as! NSNumber, name: basicData?.objectForKey("name") as! NSString, shortDescription: basicData?.objectForKey("shortDescription") as! NSString, image: UIImage(data: img.getData()!)!, position: (lat: position.latitude, long: position.longitude))
+                        var animal = Animal(animalId: basicData?.objectForKey("animalID") as! NSNumber, name: basicData?.objectForKey("name") as! NSString, shortDescription: basicData?.objectForKey("shortDescription") as! NSString, image: UIImage(data: img.getData()!)!, position: (lat: position.latitude, long: position.longitude), userID:allData.objectForKey("userID") as! NSString )
                         dataAnimals.append(animal)
                     }
                     
@@ -73,7 +74,7 @@ class Animal: NSObject {
         query.whereKey("animalID", equalTo: animalID)
         query.getFirstObjectInBackgroundWithBlock { (animalObject:PFObject?, error:NSError?) -> Void in
             if error == nil {
-                var animal = Animal(animalId: animalObject?.objectForKey("animalID") as! NSNumber, name: animalObject?.objectForKey("name") as! String, shortDescription: animalObject?.objectForKey("shortDescription") as! String, image: UIImage(), position: (12.3,123.3))
+                var animal = Animal(animalId: animalObject?.objectForKey("animalID") as! NSNumber, name: animalObject?.objectForKey("name") as! String, shortDescription: animalObject?.objectForKey("shortDescription") as! String, image: UIImage(), position: (12.3,123.3), userID: "")
                 
                 callback(animal)
             } else {

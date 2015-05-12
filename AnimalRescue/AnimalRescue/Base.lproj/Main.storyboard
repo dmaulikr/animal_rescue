@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Jg5-ga-Z0Y">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -234,14 +234,64 @@
                             <constraint firstItem="IZT-Ve-UDo" firstAttribute="top" secondItem="Zd9-Wd-4eg" secondAttribute="bottom" constant="-49" id="rFs-7A-Mos"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Map" id="H4F-4Z-7M3"/>
+                    <navigationItem key="navigationItem" id="64R-Jh-1bH"/>
                     <connections>
                         <outlet property="mapView" destination="Zd9-Wd-4eg" id="5Np-6U-BSb"/>
+                        <segue destination="25d-sJ-QVX" kind="show" identifier="goToInf" id="w6e-4b-inW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yLN-4Z-AMB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2147" y="1162"/>
+            <point key="canvasLocation" x="3021" y="1086"/>
+        </scene>
+        <!--Animal Inf View Controller-->
+        <scene sceneID="rOz-9z-hHW">
+            <objects>
+                <viewController id="25d-sJ-QVX" customClass="AnimalInfViewController" customModule="AnimalRescue" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="P5p-Et-Of3"/>
+                        <viewControllerLayoutGuide type="bottom" id="vFO-jm-KXb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2ip-N8-iMj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FKM-lf-hhH">
+                                <rect key="frame" x="31" y="101" width="139" height="127"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DDw-g8-BLz">
+                                <rect key="frame" x="77" y="259" width="53" height="30"/>
+                                <state key="normal" title="Libertar">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="releaseAnimal:" destination="25d-sJ-QVX" eventType="touchUpInside" id="nNg-Aa-xyj"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nome animal" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s77-h0-AiC">
+                                <rect key="frame" x="200" y="121" width="101" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Descrição" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2CK-H5-fSD">
+                                <rect key="frame" x="200" y="150" width="166" height="118"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="animalImage" destination="FKM-lf-hhH" id="Fwd-We-0gQ"/>
+                        <outlet property="descriptionLabel" destination="2CK-H5-fSD" id="jI3-P5-7oX"/>
+                        <outlet property="nameLabel" destination="s77-h0-AiC" id="NTi-zL-Hi0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jq0-uc-FN9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4015" y="1552"/>
         </scene>
         <!--Saved Animals-->
         <scene sceneID="can-Rv-tFs">
@@ -344,13 +394,32 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="9kB-va-A5c" kind="relationship" relationship="viewControllers" id="D9a-PJ-2SK"/>
+                        <segue destination="HgV-fR-bhT" kind="relationship" relationship="viewControllers" id="D9a-PJ-2SK"/>
                         <segue destination="46O-vM-hG3" kind="relationship" relationship="viewControllers" id="YOs-MI-zrE"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="agb-fp-rvV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1361" y="1611"/>
+            <point key="canvasLocation" x="1255" y="1761"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="0nc-bj-Fpj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HgV-fR-bhT" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Map" id="H4F-4Z-7M3"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="c0x-Tx-JlS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9kB-va-A5c" kind="relationship" relationship="rootViewController" id="sv5-of-oDk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s5O-Ux-iGq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2209" y="1086"/>
         </scene>
     </scenes>
 </document>
