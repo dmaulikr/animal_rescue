@@ -98,6 +98,7 @@ class IAPurchaseViewController: UIViewController, SKProductsRequestDelegate, SKP
         
                     case .Purchased:
                         println("Product Purchased")
+                        addKeys()
                         SKPaymentQueue.defaultQueue().finishTransaction(transaction as! SKPaymentTransaction)
                     break
         

@@ -302,6 +302,7 @@
                     <connections>
                         <outlet property="mapView" destination="Zd9-Wd-4eg" id="5Np-6U-BSb"/>
                         <segue destination="25d-sJ-QVX" kind="show" identifier="goToInf" id="w6e-4b-inW"/>
+                        <segue destination="i5d-Ql-DEi" kind="show" identifier="goToGetFreeKeys" id="iUW-zm-Ya0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yLN-4Z-AMB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -517,6 +518,7 @@
                                 </variation>
                                 <connections>
                                     <action selector="BuyButtonPressed:" destination="i5d-Ql-DEi" eventType="touchUpInside" id="fut-b8-Edb"/>
+                                    <action selector="getFreeKeysAction:" destination="i5d-Ql-DEi" eventType="touchUpInside" id="RXf-vY-Z0c"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="key50x50" translatesAutoresizingMaskIntoConstraints="NO" id="byC-fo-1mG">
@@ -577,7 +579,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LCv-uc-7AB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1175" y="255"/>
+            <point key="canvasLocation" x="3739" y="254"/>
         </scene>
     </scenes>
     <resources>
