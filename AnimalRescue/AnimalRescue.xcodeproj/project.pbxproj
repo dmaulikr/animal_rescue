@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		2A0CF8421B0118B3006C0E92 /* AnimalAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0CF8411B0118B3006C0E92 /* AnimalAnnotation.swift */; };
 		2AB06EDD1AFBE05100E8CA5E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB06EDC1AFBE05100E8CA5E /* MapViewController.swift */; };
-		2AD09E861B0128E100E34DF6 /* Ovelha.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2AD09E841B0128E100E34DF6 /* Ovelha.jpg */; };
-		2AD09E871B0128E100E34DF6 /* Cobra.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2AD09E851B0128E100E34DF6 /* Cobra.jpg */; };
 		2AD09E891B0132C000E34DF6 /* AnimalInfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD09E881B0132C000E34DF6 /* AnimalInfViewController.swift */; };
 		304348C91B0269A4000E1A8D /* SavedAnimalsInfoControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304348C81B0269A4000E1A8D /* SavedAnimalsInfoControler.swift */; };
 		3066E5B01B011FD600F11D79 /* SavedAnimalsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3066E5AF1B011FD600F11D79 /* SavedAnimalsController.swift */; };
@@ -22,7 +20,6 @@
 		30995EF11AFBE0BB005266A1 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30995EF01AFBE0BB005266A1 /* Animal.swift */; };
 		344288071AFBEFB200C550CF /* Parse in Frameworks */ = {isa = PBXBuildFile; fileRef = 344288061AFBEFB200C550CF /* Parse */; };
 		344288091AFBEFF200C550CF /* Bolts in Frameworks */ = {isa = PBXBuildFile; fileRef = 344288081AFBEFF200C550CF /* Bolts */; };
-		344288131B025DB500C550CF /* Leão.png in Resources */ = {isa = PBXBuildFile; fileRef = 344288121B025DB500C550CF /* Leão.png */; };
 		348080031AFBD77600B36306 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 348080021AFBD77600B36306 /* AudioToolbox.framework */; };
 		348080051AFBD78900B36306 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 348080041AFBD78900B36306 /* CFNetwork.framework */; };
 		348080071AFBD7A500B36306 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 348080061AFBD7A500B36306 /* CoreLocation.framework */; };
@@ -44,6 +41,7 @@
 		839B8BA21AFBE27F00293590 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 839B8B9D1AFBE27F00293590 /* FBSDKLoginKit.framework */; };
 		839B8BA31AFBE27F00293590 /* FBSDKMessengerShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 839B8B9E1AFBE27F00293590 /* FBSDKMessengerShareKit.framework */; };
 		839B8BA41AFBE27F00293590 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 839B8B9F1AFBE27F00293590 /* FBSDKShareKit.framework */; };
+		83C88E3D1B0289D300A7E30C /* iBeaconViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C88E3C1B0289D300A7E30C /* iBeaconViewController.swift */; };
 		83EA8CE41B0115D300E026C6 /* IAPurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EA8CE31B0115D300E026C6 /* IAPurchaseViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -60,8 +58,6 @@
 /* Begin PBXFileReference section */
 		2A0CF8411B0118B3006C0E92 /* AnimalAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalAnnotation.swift; sourceTree = "<group>"; };
 		2AB06EDC1AFBE05100E8CA5E /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		2AD09E841B0128E100E34DF6 /* Ovelha.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Ovelha.jpg; sourceTree = "<group>"; };
-		2AD09E851B0128E100E34DF6 /* Cobra.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Cobra.jpg; sourceTree = "<group>"; };
 		2AD09E881B0132C000E34DF6 /* AnimalInfViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalInfViewController.swift; sourceTree = "<group>"; };
 		304348C81B0269A4000E1A8D /* SavedAnimalsInfoControler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedAnimalsInfoControler.swift; sourceTree = "<group>"; };
 		3066E5AF1B011FD600F11D79 /* SavedAnimalsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedAnimalsController.swift; sourceTree = "<group>"; };
@@ -73,7 +69,6 @@
 		30995EF01AFBE0BB005266A1 /* Animal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
 		344288061AFBEFB200C550CF /* Parse */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = Parse; path = AnimalRescue/Parse.framework/Parse; sourceTree = "<group>"; };
 		344288081AFBEFF200C550CF /* Bolts */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = Bolts; path = AnimalRescue/Bolts.framework/Bolts; sourceTree = "<group>"; };
-		344288121B025DB500C550CF /* Leão.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Leão.png"; sourceTree = "<group>"; };
 		34807FF61AFBD68300B36306 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = AnimalRescue/Bolts.framework; sourceTree = "<group>"; };
 		34807FF71AFBD68300B36306 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = AnimalRescue/Parse.framework; sourceTree = "<group>"; };
 		348080021AFBD77600B36306 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -100,6 +95,7 @@
 		839B8B9D1AFBE27F00293590 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = AnimalRescue/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		839B8B9E1AFBE27F00293590 /* FBSDKMessengerShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKMessengerShareKit.framework; path = AnimalRescue/FBSDKMessengerShareKit.framework; sourceTree = "<group>"; };
 		839B8B9F1AFBE27F00293590 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = AnimalRescue/FBSDKShareKit.framework; sourceTree = "<group>"; };
+		83C88E3C1B0289D300A7E30C /* iBeaconViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iBeaconViewController.swift; sourceTree = "<group>"; };
 		83EA8CE31B0115D300E026C6 /* IAPurchaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPurchaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -198,6 +194,7 @@
 				3066E5AF1B011FD600F11D79 /* SavedAnimalsController.swift */,
 				3066E5B11B012A2000F11D79 /* BasicCellView.swift */,
 				2AD09E881B0132C000E34DF6 /* AnimalInfViewController.swift */,
+				83C88E3C1B0289D300A7E30C /* iBeaconViewController.swift */,
 				83EA8CE31B0115D300E026C6 /* IAPurchaseViewController.swift */,
 				304348C81B0269A4000E1A8D /* SavedAnimalsInfoControler.swift */,
 			);
@@ -207,10 +204,7 @@
 		30995EE51AFBD9A4005266A1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				2AD09E841B0128E100E34DF6 /* Ovelha.jpg */,
-				344288121B025DB500C550CF /* Leão.png */,
 				83676B4D1AFBCB390080042F /* Images.xcassets */,
-				2AD09E851B0128E100E34DF6 /* Cobra.jpg */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -312,7 +306,7 @@
 				TargetAttributes = {
 					83676B3D1AFBCB390080042F = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = SRL58EEG8Y;
+						DevelopmentTeam = G42Z863W7H;
 					};
 					83676B551AFBCB390080042F = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -344,9 +338,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				344288131B025DB500C550CF /* Leão.png in Resources */,
-				2AD09E871B0128E100E34DF6 /* Cobra.jpg in Resources */,
-				2AD09E861B0128E100E34DF6 /* Ovelha.jpg in Resources */,
 				83676B4C1AFBCB390080042F /* Main.storyboard in Resources */,
 				83676B511AFBCB390080042F /* LaunchScreen.xib in Resources */,
 				83676B4E1AFBCB390080042F /* Images.xcassets in Resources */,
@@ -370,6 +361,7 @@
 				83676B491AFBCB390080042F /* ViewController.swift in Sources */,
 				83676B471AFBCB390080042F /* AnimalRescue.xcdatamodeld in Sources */,
 				83676B441AFBCB390080042F /* AppDelegate.swift in Sources */,
+				83C88E3D1B0289D300A7E30C /* iBeaconViewController.swift in Sources */,
 				83EA8CE41B0115D300E026C6 /* IAPurchaseViewController.swift in Sources */,
 				30995EF11AFBE0BB005266A1 /* Animal.swift in Sources */,
 				304348C91B0269A4000E1A8D /* SavedAnimalsInfoControler.swift in Sources */,
