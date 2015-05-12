@@ -77,7 +77,6 @@ class MapViewController: UIViewController , CLLocationManagerDelegate , MKMapVie
     
     func updateDistanceAnnotation(annotation: MKPointAnnotation!) -> (Bool)
     {
-        println("entrei")
         if (annotation == nil)
         {
             println("No annotation selected")
@@ -107,6 +106,8 @@ class MapViewController: UIViewController , CLLocationManagerDelegate , MKMapVie
         
         Animal.retrieveAllAnimals { (allAnimal) -> () in
             for animal in allAnimal{
+                
+                if(animal.usrID == "x"){
                 var point = AnimalAnnotation();
                 point.coordinate = CLLocationCoordinate2DMake(animal.position.lat, animal.position.long)
                 point.title = animal.name as! String
@@ -132,6 +133,7 @@ class MapViewController: UIViewController , CLLocationManagerDelegate , MKMapVie
                     alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
                     self.presentViewController(alert, animated: true, completion: nil)
                     
+                }
                 }
             }
         }

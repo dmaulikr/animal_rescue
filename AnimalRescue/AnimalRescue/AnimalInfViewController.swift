@@ -48,7 +48,6 @@ class AnimalInfViewController: UIViewController, CLLocationManagerDelegate{
         
         if(updateDistanceAnnotation(annotation)){ //verifica se o animal selecionado está a menos de 600m
             
-            //Cristian, verifica isso.
             
             
             
@@ -71,6 +70,25 @@ class AnimalInfViewController: UIViewController, CLLocationManagerDelegate{
                                 object["keys"] = object["keys"] as! NSInteger - 1
                                 object.saveEventually()
                                 
+                                var otherQuery = PFQuery(className: "Animal_Data")
+                                otherQuery.whereKey("animalID", equalTo: self.animal.an.id)
+                                otherQuery.findObjectsInBackgroundWithBlock {
+                                    (objects: [AnyObject]?, error: NSError?) -> Void in
+                                    
+                                    if error == nil {
+                                        // The find succeeded.
+                                        println("Successfully retrieved \(objects!.count) scores.")
+                                        if let objects = objects as? [PFObject] {
+                                            for object in objects {
+                                                object["userID"] = PFUser.currentUser()!.objectId!
+                                                object.saveEventually()
+                                            }
+                                        }
+                                    } else {
+                                        // Log details of the failure
+                                        println("Error: \(error!) \(error!.userInfo!)")
+                                    }
+                                }
                                 var alert = UIAlertController(title: "Uhul!", message: "Animal libertado!", preferredStyle: UIAlertControllerStyle.Alert)
                                 alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
                                 self.presentViewController(alert, animated: true, completion: nil) //alerta para o usuário
