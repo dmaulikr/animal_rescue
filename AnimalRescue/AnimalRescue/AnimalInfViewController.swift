@@ -70,6 +70,8 @@ class AnimalInfViewController: UIViewController, CLLocationManagerDelegate{
                                 object["keys"] = object["keys"] as! NSInteger - 1
                                 object.saveEventually()
                                 
+
+                                
                                 var otherQuery = PFQuery(className: "Animal_Data")
                                 otherQuery.whereKey("animalID", equalTo: self.animal.an.id)
                                 otherQuery.findObjectsInBackgroundWithBlock {
@@ -81,7 +83,36 @@ class AnimalInfViewController: UIViewController, CLLocationManagerDelegate{
                                         if let objects = objects as? [PFObject] {
                                             for object in objects {
                                                 object["userID"] = PFUser.currentUser()!.objectId!
+                                                self.animal.an.usrID = PFUser.currentUser()!.objectId!
                                                 object.saveEventually()
+                                                
+                                                var alert = UIAlertController(title: "Uhul!", message: "Animal libertado!", preferredStyle: UIAlertControllerStyle.Alert)
+                                                
+                                                
+                                                self.presentViewController(alert, animated: true, completion: nil) //alerta para o usuário
+                                                
+                                                alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { action in
+                                                    switch action.style{
+                                                    case .Default:
+                                                        println("default")
+                                                        self.navigationController?.popViewControllerAnimated(true)
+                                                        
+                                                    case .Cancel:
+                                                        println("cancel")
+                                                        self.navigationController?.popViewControllerAnimated(true)
+                                                        
+                                                    case .Destructive:
+                                                        println("destructive")
+                                                        self.navigationController?.popViewControllerAnimated(true)
+                                                    }
+                                                }))
+                                                
+                                                self.navigationController?.popViewControllerAnimated(true)
+                                                
+                                                
+                                                
+                                                
+                                                
                                             }
                                         }
                                     } else {
@@ -89,9 +120,6 @@ class AnimalInfViewController: UIViewController, CLLocationManagerDelegate{
                                         println("Error: \(error!) \(error!.userInfo!)")
                                     }
                                 }
-                                var alert = UIAlertController(title: "Uhul!", message: "Animal libertado!", preferredStyle: UIAlertControllerStyle.Alert)
-                                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
-                                self.presentViewController(alert, animated: true, completion: nil) //alerta para o usuário
                                 
                             } else {
                                 var alert = UIAlertController(title: "Ops", message: "Você não possui chaves suficientes.", preferredStyle: UIAlertControllerStyle.Alert)
@@ -113,7 +141,7 @@ class AnimalInfViewController: UIViewController, CLLocationManagerDelegate{
         }
         else
         {
-            var alert = UIAlertController(title: "Ops", message: "Você não está perto o suficuente do animal.", preferredStyle: UIAlertControllerStyle.Alert)
+            var alert = UIAlertController(title: "Ops", message: "Você não está perto o suficiente do animal.", preferredStyle: UIAlertControllerStyle.Alert)
             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
             self.presentViewController(alert, animated: true, completion: nil)//alerta para o usuário
             
@@ -145,6 +173,17 @@ class AnimalInfViewController: UIViewController, CLLocationManagerDelegate{
         if(distance > 600) {return false}
         else {return true}
         
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        println("Disappear")
+        println("\(animal.an.usrID)")
+        if(animal.an.usrID != "x"){
+            println("batata")
+        var alert = UIAlertController(title: "Uhul!", message: "Animal libertado!", preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+        self.presentViewController(alert, animated: true, completion: nil) //alerta para o usuário
+        }
     }
     
 }
