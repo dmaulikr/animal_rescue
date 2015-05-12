@@ -163,7 +163,7 @@ class MapViewController: UIViewController , CLLocationManagerDelegate , MKMapVie
                 let cpa = annotation as! AnimalAnnotation
                 
                 println("\(cpa.an.name)")
-                pin!.leftCalloutAccessoryView = UIImageView(image: UIImage(named: "\(cpa.an.name).jpg"))
+                pin!.leftCalloutAccessoryView = UIImageView(image: UIImage(named: "\(cpa.an.id)"))
 
                 pin!.rightCalloutAccessoryView = UIButton.buttonWithType(.DetailDisclosure) as! UIButton
                 
