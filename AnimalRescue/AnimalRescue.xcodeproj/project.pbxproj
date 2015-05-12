@@ -10,7 +10,6 @@
 		2A0CF8421B0118B3006C0E92 /* AnimalAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0CF8411B0118B3006C0E92 /* AnimalAnnotation.swift */; };
 		2AB06EDD1AFBE05100E8CA5E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB06EDC1AFBE05100E8CA5E /* MapViewController.swift */; };
 		2AD09E861B0128E100E34DF6 /* Ovelha.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2AD09E841B0128E100E34DF6 /* Ovelha.jpg */; };
-		2AD09E871B0128E100E34DF6 /* Cobra.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2AD09E851B0128E100E34DF6 /* Cobra.jpg */; };
 		2AD09E891B0132C000E34DF6 /* AnimalInfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD09E881B0132C000E34DF6 /* AnimalInfViewController.swift */; };
 		3066E5B01B011FD600F11D79 /* SavedAnimalsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3066E5AF1B011FD600F11D79 /* SavedAnimalsController.swift */; };
 		3066E5B21B012A2000F11D79 /* BasicCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3066E5B11B012A2000F11D79 /* BasicCellView.swift */; };
@@ -21,7 +20,9 @@
 		30995EF11AFBE0BB005266A1 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30995EF01AFBE0BB005266A1 /* Animal.swift */; };
 		344288071AFBEFB200C550CF /* Parse in Frameworks */ = {isa = PBXBuildFile; fileRef = 344288061AFBEFB200C550CF /* Parse */; };
 		344288091AFBEFF200C550CF /* Bolts in Frameworks */ = {isa = PBXBuildFile; fileRef = 344288081AFBEFF200C550CF /* Bolts */; };
-		344288131B025DB500C550CF /* Leão.png in Resources */ = {isa = PBXBuildFile; fileRef = 344288121B025DB500C550CF /* Leão.png */; };
+		344288171B025F3200C550CF /* Borboleta.png in Resources */ = {isa = PBXBuildFile; fileRef = 344288141B025F3200C550CF /* Borboleta.png */; };
+		344288181B025F3200C550CF /* Cobra.png in Resources */ = {isa = PBXBuildFile; fileRef = 344288151B025F3200C550CF /* Cobra.png */; };
+		344288191B025F3200C550CF /* Leão.png in Resources */ = {isa = PBXBuildFile; fileRef = 344288161B025F3200C550CF /* Leão.png */; };
 		348080031AFBD77600B36306 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 348080021AFBD77600B36306 /* AudioToolbox.framework */; };
 		348080051AFBD78900B36306 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 348080041AFBD78900B36306 /* CFNetwork.framework */; };
 		348080071AFBD7A500B36306 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 348080061AFBD7A500B36306 /* CoreLocation.framework */; };
@@ -60,7 +61,6 @@
 		2A0CF8411B0118B3006C0E92 /* AnimalAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalAnnotation.swift; sourceTree = "<group>"; };
 		2AB06EDC1AFBE05100E8CA5E /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		2AD09E841B0128E100E34DF6 /* Ovelha.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Ovelha.jpg; sourceTree = "<group>"; };
-		2AD09E851B0128E100E34DF6 /* Cobra.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Cobra.jpg; sourceTree = "<group>"; };
 		2AD09E881B0132C000E34DF6 /* AnimalInfViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalInfViewController.swift; sourceTree = "<group>"; };
 		3066E5AF1B011FD600F11D79 /* SavedAnimalsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedAnimalsController.swift; sourceTree = "<group>"; };
 		3066E5B11B012A2000F11D79 /* BasicCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicCellView.swift; sourceTree = "<group>"; };
@@ -71,7 +71,9 @@
 		30995EF01AFBE0BB005266A1 /* Animal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
 		344288061AFBEFB200C550CF /* Parse */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = Parse; path = AnimalRescue/Parse.framework/Parse; sourceTree = "<group>"; };
 		344288081AFBEFF200C550CF /* Bolts */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = Bolts; path = AnimalRescue/Bolts.framework/Bolts; sourceTree = "<group>"; };
-		344288121B025DB500C550CF /* Leão.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Leão.png"; sourceTree = "<group>"; };
+		344288141B025F3200C550CF /* Borboleta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Borboleta.png; sourceTree = "<group>"; };
+		344288151B025F3200C550CF /* Cobra.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Cobra.png; sourceTree = "<group>"; };
+		344288161B025F3200C550CF /* Leão.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Leão.png"; sourceTree = "<group>"; };
 		34807FF61AFBD68300B36306 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = AnimalRescue/Bolts.framework; sourceTree = "<group>"; };
 		34807FF71AFBD68300B36306 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = AnimalRescue/Parse.framework; sourceTree = "<group>"; };
 		348080021AFBD77600B36306 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -206,8 +208,9 @@
 			children = (
 				83676B4D1AFBCB390080042F /* Images.xcassets */,
 				2AD09E841B0128E100E34DF6 /* Ovelha.jpg */,
-				344288121B025DB500C550CF /* Leão.png */,
-				2AD09E851B0128E100E34DF6 /* Cobra.jpg */,
+				344288141B025F3200C550CF /* Borboleta.png */,
+				344288151B025F3200C550CF /* Cobra.png */,
+				344288161B025F3200C550CF /* Leão.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -341,8 +344,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				344288131B025DB500C550CF /* Leão.png in Resources */,
-				2AD09E871B0128E100E34DF6 /* Cobra.jpg in Resources */,
+				344288171B025F3200C550CF /* Borboleta.png in Resources */,
+				344288181B025F3200C550CF /* Cobra.png in Resources */,
+				344288191B025F3200C550CF /* Leão.png in Resources */,
 				2AD09E861B0128E100E34DF6 /* Ovelha.jpg in Resources */,
 				83676B4C1AFBCB390080042F /* Main.storyboard in Resources */,
 				83676B511AFBCB390080042F /* LaunchScreen.xib in Resources */,
