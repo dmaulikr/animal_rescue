@@ -24,8 +24,18 @@ class MapViewController: UIViewController , CLLocationManagerDelegate , MKMapVie
     @IBOutlet weak var mapView: MKMapView!
     var locationManager = CLLocationManager()
    
+    override func viewDidDisappear(animated: Bool) {
+        println("disapear")
+    }
 
-
+    override func viewDidAppear(animated: Bool) {
+        println("did")
+        
+        if(mapView.annotations.count != 0){
+                mapView.removeAnnotations(mapView.annotations)
+                generatePins()
+            }
+        }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -129,9 +139,9 @@ class MapViewController: UIViewController , CLLocationManagerDelegate , MKMapVie
                     localNotification.fireDate = NSDate(timeIntervalSinceNow: 2)
                     UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
                     
-                    var alert = UIAlertController(title: "Animal por perto", message: "Animal em perigo por perto!", preferredStyle: UIAlertControllerStyle.Alert)
-                    alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
-                    self.presentViewController(alert, animated: true, completion: nil)
+//                    var alert = UIAlertController(title: "Animal por perto", message: "Animal em perigo por perto!", preferredStyle: UIAlertControllerStyle.Alert)
+//                    alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+//                    self.presentViewController(alert, animated: true, completion: nil)
                     
                 }
                 }
