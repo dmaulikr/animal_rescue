@@ -13,8 +13,13 @@ import CoreLocation
 import MapKit
 import Parse
 
+let uuid = NSUUID(UUIDString: "1A8D83AD-44EC-42F9-A5A9-989B2477D800")
+let identifier = "beacon.identifier"
 
 class MapViewController: UIViewController , CLLocationManagerDelegate , MKMapViewDelegate{
+    
+    var beaconsFound: [CLBeacon] = [CLBeacon]()
+    var beaconRegion = CLBeaconRegion(proximityUUID: uuid, identifier: identifier)
     
     var animalClicked: AnimalAnnotation = AnimalAnnotation()
     
@@ -56,13 +61,20 @@ class MapViewController: UIViewController , CLLocationManagerDelegate , MKMapVie
         
     }
     
+    override func viewWillDisappear(animated: Bool) {
+        locationManager.stopMonitoringForRegion(beaconRegion)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    
     func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
         if status == CLAuthorizationStatus.AuthorizedWhenInUse  {
+            
+            locationManager.startMonitoringForRegion(beaconRegion)
             
             mapView.showsUserLocation = true
             
@@ -211,6 +223,27 @@ class MapViewController: UIViewController , CLLocationManagerDelegate , MKMapVie
         if segue.identifier == "goToInf" {
             var vc =  segue.destinationViewController as! AnimalInfViewController
             vc.animal = animalClicked
+        }
+        
+    }
+    
+    
+    //Beacon
+    
+    func locationManager(manager: CLLocationManager!, didEnterRegion region: CLRegion!) {
+        locationManager.startRangingBeaconsInRegion(region as! CLBeaconRegion)
+        println("Beacon encontrado")
+        self.performSegueWithIdentifier("goToGetFreeKeys", sender: self)
+    }
+    
+    func locationManager(manager: CLLocationManager!, didExitRegion region: CLRegion!) {
+        locationManager.stopRangingBeaconsInRegion(region as! CLBeaconRegion)
+    }
+    
+    func locationManager(manager: CLLocationManager!, didRangeBeacons beacons: [AnyObject]!, inRegion region: CLBeaconRegion!) {
+        
+        if (beacons.count > 0) {
+            beaconsFound = beacons as! [CLBeacon]
         }
         
     }
