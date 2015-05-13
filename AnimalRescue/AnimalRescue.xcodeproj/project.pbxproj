@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2A0CF8421B0118B3006C0E92 /* AnimalAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0CF8411B0118B3006C0E92 /* AnimalAnnotation.swift */; };
+		2A80AB781B03A1850076C68F /* FindBeaconsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A80AB771B03A1850076C68F /* FindBeaconsViewController.swift */; };
 		2AB06EDD1AFBE05100E8CA5E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB06EDC1AFBE05100E8CA5E /* MapViewController.swift */; };
 		2AD09E891B0132C000E34DF6 /* AnimalInfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD09E881B0132C000E34DF6 /* AnimalInfViewController.swift */; };
 		304348C91B0269A4000E1A8D /* SavedAnimalsInfoControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304348C81B0269A4000E1A8D /* SavedAnimalsInfoControler.swift */; };
@@ -57,6 +58,7 @@
 
 /* Begin PBXFileReference section */
 		2A0CF8411B0118B3006C0E92 /* AnimalAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalAnnotation.swift; sourceTree = "<group>"; };
+		2A80AB771B03A1850076C68F /* FindBeaconsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindBeaconsViewController.swift; sourceTree = "<group>"; };
 		2AB06EDC1AFBE05100E8CA5E /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		2AD09E881B0132C000E34DF6 /* AnimalInfViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalInfViewController.swift; sourceTree = "<group>"; };
 		304348C81B0269A4000E1A8D /* SavedAnimalsInfoControler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedAnimalsInfoControler.swift; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 				3066E5B11B012A2000F11D79 /* BasicCellView.swift */,
 				2AD09E881B0132C000E34DF6 /* AnimalInfViewController.swift */,
 				83C88E3C1B0289D300A7E30C /* iBeaconViewController.swift */,
+				2A80AB771B03A1850076C68F /* FindBeaconsViewController.swift */,
 				83EA8CE31B0115D300E026C6 /* IAPurchaseViewController.swift */,
 				304348C81B0269A4000E1A8D /* SavedAnimalsInfoControler.swift */,
 			);
@@ -306,6 +309,12 @@
 				TargetAttributes = {
 					83676B3D1AFBCB390080042F = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = G42Z863W7H;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+						};
 					};
 					83676B551AFBCB390080042F = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -368,6 +377,7 @@
 				2AD09E891B0132C000E34DF6 /* AnimalInfViewController.swift in Sources */,
 				2AB06EDD1AFBE05100E8CA5E /* MapViewController.swift in Sources */,
 				3066E5B21B012A2000F11D79 /* BasicCellView.swift in Sources */,
+				2A80AB781B03A1850076C68F /* FindBeaconsViewController.swift in Sources */,
 				3066E5B01B011FD600F11D79 /* SavedAnimalsController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -511,7 +521,7 @@
 					"$(PROJECT_DIR)/AnimalRescue/Bolts.framework",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "c3fa6c5e-9cb8-484d-94d9-75fb30d742af";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -534,7 +544,7 @@
 					"$(PROJECT_DIR)/AnimalRescue/Bolts.framework",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "c3fa6c5e-9cb8-484d-94d9-75fb30d742af";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
