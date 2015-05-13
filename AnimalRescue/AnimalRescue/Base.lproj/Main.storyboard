@@ -300,16 +300,18 @@
                     </view>
                     <navigationItem key="navigationItem" id="64R-Jh-1bH">
                         <nil key="title"/>
-                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Scu-Oa-WO1">
-                            <rect key="frame" x="180" y="7" width="240" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Button">
-                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                            <connections>
-                                <segue destination="i5d-Ql-DEi" kind="show" id="5hD-rO-MuE"/>
-                            </connections>
-                        </button>
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="qWM-rA-Vhq">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Scu-Oa-WO1">
+                                <rect key="frame" x="180" y="7" width="240" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Procurar Tesouros">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="i5d-Ql-DEi" kind="show" id="5hD-rO-MuE"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="IIy-7B-pOG">
                             <view key="customView" contentMode="scaleToFill" id="rDC-PL-bza">
                                 <rect key="frame" x="0.0" y="0.0" width="133" height="33"/>
@@ -579,24 +581,11 @@
                                     <constraint firstAttribute="height" constant="250" id="9MU-54-LD6"/>
                                     <constraint firstAttribute="width" constant="250" id="g4u-zc-6Wk"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <inset key="contentEdgeInsets" minX="70" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="x 10">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" red="0.57254901960000004" green="0.58039215690000001" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="4OT-dJ-jaM"/>
-                                    </mask>
-                                </variation>
                                 <connections>
                                     <action selector="BuyButtonPressed:" destination="i5d-Ql-DEi" eventType="touchUpInside" id="fut-b8-Edb"/>
                                     <action selector="getFreeKeysAction:" destination="i5d-Ql-DEi" eventType="touchUpInside" id="RXf-vY-Z0c"/>
                                 </connections>
                             </imageView>
-
-                            
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ujx-1U-E0h">
                                 <rect key="frame" x="211" y="159" width="178" height="79"/>
                                 <subviews>

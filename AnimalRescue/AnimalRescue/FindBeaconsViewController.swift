@@ -77,32 +77,35 @@ class FindBeaconsViewController: UIViewController, CLLocationManagerDelegate {
                     alert()
                     self.button.hidden = false
                     manager.stopUpdatingLocation()
-                    self.searchLabel.text = "Chave achada!"
+                    self.searchLabel.text = "Chave encontrada!"
                     
                     var keys = PFUser.currentUser()?.objectForKey("keys") as! NSInteger + 10
                 
                     PFUser.currentUser()?.setValue(keys, forKey: "keys")
-
+                    PFUser.currentUser()?.saveEventually()
+                    
                 case CLProximity.Near:
                     locationManager!.stopRangingBeaconsInRegion(self.reg)
                     alert()
                     self.button.hidden = false
                     manager.stopUpdatingLocation()
-                    self.searchLabel.text = "Chave achada!"
+                    self.searchLabel.text = "Chave encontrada!"
                     
                     var keys = PFUser.currentUser()?.objectForKey("keys") as! NSInteger + 10
                     
                     PFUser.currentUser()?.setValue(keys, forKey: "keys")
+                    PFUser.currentUser()?.saveEventually()
                 case CLProximity.Immediate:
                     locationManager!.stopRangingBeaconsInRegion(self.reg)
                     manager.stopUpdatingLocation()
                     alert()
                     self.button.hidden = false
-                    self.searchLabel.text = "Chave achada!"
+                    self.searchLabel.text = "Chave encontrada!"
                     
                     var keys = PFUser.currentUser()?.objectForKey("keys") as! NSInteger + 10
-                    
+                
                     PFUser.currentUser()?.setValue(keys, forKey: "keys")
+                    PFUser.currentUser()?.saveEventually()
                 case CLProximity.Unknown:
                     println("unk")
                     return
@@ -140,11 +143,11 @@ class FindBeaconsViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBAction func buttonAction(sender: AnyObject) {
         
-        
+        self.button.hidden = true
         locationManager!.startMonitoringForRegion(self.reg)
         locationManager!.startRangingBeaconsInRegion(self.reg)
         locationManager!.startUpdatingLocation()
-        self.searchLabel.text = "Procurando chaves"
+        self.searchLabel.text = "Procurando chaves..."
         
         
     }
@@ -152,8 +155,8 @@ class FindBeaconsViewController: UIViewController, CLLocationManagerDelegate {
     
     func alert(){
         
-        var alert = UIAlertController(title: "Achei", message: "Voce achou um beacon", preferredStyle: UIAlertControllerStyle.Alert)
-        alert.addAction(UIAlertAction(title: "uhul", style: UIAlertActionStyle.Default, handler: nil))
+        var alert = UIAlertController(title: "Achei!", message: "Voce achou um tesouro!", preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "Resgatar 10 chaves.", style: UIAlertActionStyle.Default, handler: nil))
         self.presentViewController(alert, animated: true, completion: nil) //alerta para o usuário
         
     }
