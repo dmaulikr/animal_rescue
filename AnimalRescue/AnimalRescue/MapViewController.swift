@@ -52,7 +52,6 @@ class MapViewController: UIViewController , CLLocationManagerDelegate , MKMapVie
         locationManager.requestWhenInUseAuthorization()
         
         generatePins()
-        
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -226,6 +225,10 @@ class MapViewController: UIViewController , CLLocationManagerDelegate , MKMapVie
     
     func locationManager(manager: CLLocationManager!, didEnterRegion region: CLRegion!) {
         locationManager.startRangingBeaconsInRegion(region as! CLBeaconRegion)
+        
+        var beacon = beaconsFound.first
+        print(beacon?.proximity)
+        
         println("Beacon encontrado")
         self.performSegueWithIdentifier("goToGetFreeKeys", sender: self)
     }

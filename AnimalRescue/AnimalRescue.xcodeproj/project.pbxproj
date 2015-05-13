@@ -306,6 +306,7 @@
 				TargetAttributes = {
 					83676B3D1AFBCB390080042F = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 33CFWY4E28;
 					};
 					83676B551AFBCB390080042F = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -511,7 +512,7 @@
 					"$(PROJECT_DIR)/AnimalRescue/Bolts.framework",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "c3fa6c5e-9cb8-484d-94d9-75fb30d742af";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -534,7 +535,7 @@
 					"$(PROJECT_DIR)/AnimalRescue/Bolts.framework",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "c3fa6c5e-9cb8-484d-94d9-75fb30d742af";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
