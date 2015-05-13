@@ -123,7 +123,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.28627450980392155" green="0.32941176470588235" blue="0.46666666666666667" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="fha-Cr-7kJ" firstAttribute="trailing" secondItem="F0f-Ue-naW" secondAttribute="trailing" id="05G-gf-Lc9"/>
                                     <constraint firstItem="8mY-WZ-x7x" firstAttribute="top" secondItem="t6e-Oa-U8X" secondAttribute="top" constant="28" id="2Pb-PS-fvA"/>
@@ -137,17 +137,18 @@
                                     <constraint firstItem="fha-Cr-7kJ" firstAttribute="top" secondItem="F0f-Ue-naW" secondAttribute="bottom" constant="62" id="aVS-jn-mIg"/>
                                     <constraint firstItem="Rr4-XP-DvD" firstAttribute="leading" secondItem="F0f-Ue-naW" secondAttribute="leading" id="gp5-LK-h17"/>
                                     <constraint firstItem="F0f-Ue-naW" firstAttribute="centerX" secondItem="8mY-WZ-x7x" secondAttribute="centerX" constant="-4.5" id="iJN-qn-vqI"/>
+                                    <constraint firstAttribute="height" constant="268" id="w1r-S1-aa1"/>
                                     <constraint firstItem="ukY-zP-cro" firstAttribute="leading" secondItem="SqN-Jh-V3e" secondAttribute="trailing" constant="20" id="xAu-wd-H7o"/>
                                     <constraint firstItem="SqN-Jh-V3e" firstAttribute="centerX" secondItem="fha-Cr-7kJ" secondAttribute="centerX" constant="-45.5" id="xJs-rH-hO2"/>
                                 </constraints>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo1.6" translatesAutoresizingMaskIntoConstraints="NO" id="0vj-fR-vRX">
-                                <rect key="frame" x="200" y="-51" width="200" height="200"/>
+                                <rect key="frame" x="191" y="381" width="219" height="199"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="8zV-wQ-Y7Z"/>
-                                    <constraint firstAttribute="height" constant="200" id="Ciq-aH-WTs"/>
+                                    <constraint firstAttribute="height" constant="199" id="Ciq-aH-WTs"/>
                                     <constraint firstAttribute="width" constant="250" id="EiK-yd-U7l"/>
-                                    <constraint firstAttribute="width" constant="200" id="aKy-Ob-Xcz"/>
+                                    <constraint firstAttribute="width" constant="219" id="aKy-Ob-Xcz"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -168,9 +169,10 @@
                             <constraint firstItem="0vj-fR-vRX" firstAttribute="centerX" secondItem="t6e-Oa-U8X" secondAttribute="centerX" id="Mux-fD-pic"/>
                             <constraint firstItem="d2O-ms-6zO" firstAttribute="centerX" secondItem="5TV-p6-ivG" secondAttribute="centerX" constant="-48.5" id="OUR-Ob-qEH"/>
                             <constraint firstItem="0vj-fR-vRX" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="50" id="Sgf-hP-8kH"/>
+                            <constraint firstItem="0vj-fR-vRX" firstAttribute="top" secondItem="t6e-Oa-U8X" secondAttribute="bottom" constant="23" id="ZdM-9T-F6u"/>
                             <constraint firstItem="BMw-Wn-qTd" firstAttribute="centerX" secondItem="Uzg-t1-CE4" secondAttribute="centerX" id="aH1-ye-zDl"/>
                             <constraint firstItem="5TV-p6-ivG" firstAttribute="top" secondItem="BMw-Wn-qTd" secondAttribute="bottom" constant="16" id="bbV-OP-nHu"/>
-                            <constraint firstItem="BMw-Wn-qTd" firstAttribute="top" secondItem="0vj-fR-vRX" secondAttribute="bottom" constant="40" id="fMh-EV-VQq"/>
+                            <constraint firstItem="BMw-Wn-qTd" firstAttribute="top" secondItem="0vj-fR-vRX" secondAttribute="bottom" constant="-391" id="fMh-EV-VQq"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="d2O-ms-6zO" secondAttribute="bottom" constant="287" id="gEf-YM-gJG"/>
                             <constraint firstItem="5TV-p6-ivG" firstAttribute="leading" secondItem="BMw-Wn-qTd" secondAttribute="leading" id="lyi-OX-1pg"/>
                             <constraint firstItem="0J4-Nc-sdA" firstAttribute="leading" secondItem="d2O-ms-6zO" secondAttribute="trailing" constant="23" id="qKM-9L-8Wy"/>
@@ -179,7 +181,9 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="BV1-dK-LoG"/>
                                 <exclude reference="Sgf-hP-8kH"/>
+                                <exclude reference="IyE-iG-o9E"/>
                             </mask>
                         </variation>
                     </view>
