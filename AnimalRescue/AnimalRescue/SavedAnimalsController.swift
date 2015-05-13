@@ -14,6 +14,7 @@ class SavedAnimalsController: UIViewController,UITableViewDelegate,UITableViewDa
     @IBOutlet var tableView: UITableView!
     
     let basicCellIdentifier = "BasicCell"
+
     
     var animals:[Animal] = [] {
         didSet {
@@ -28,11 +29,14 @@ class SavedAnimalsController: UIViewController,UITableViewDelegate,UITableViewDa
         
         tableView.dataSource = self
         tableView.delegate = self
-        
+    }
+    
+    override func viewWillAppear(animated: Bool) {
         var userID = PFUser.currentUser()?.objectId!
         
         Animal.retrieveAnimalByUserId(userID!) {
-                (allAnimals) in
+            (allAnimals) in
+            print("retrived animals")
             self.animals = allAnimals
         }
     }
@@ -55,9 +59,9 @@ class SavedAnimalsController: UIViewController,UITableViewDelegate,UITableViewDa
     
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        var id = indexPath.row + 1
+        var id = indexPath.row
         
-        Animal.retrieveAnimalById(id){
+        Animal.retrieveAnimalById(id) {
             (animalData) in
             print(animalData?.name)
         }
